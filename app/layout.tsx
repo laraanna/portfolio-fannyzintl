@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import SiteFooter from "./components/SiteFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const amsterdamTime = new Intl.DateTimeFormat("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "Europe/Amsterdam",
-  }).format(new Date());
-
   return (
     <html lang="en">
       <body
@@ -42,12 +37,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="border-t border-neutral-200 mt-16">
-          <div className="mx-auto max-w-6xl p-6 flex items-center justify-between text-sm text-neutral-600">
-            <div>{`It's ${amsterdamTime} where I live in Amsterdam.`}</div>
-            <div>© 2025 FANNY ZINTL</div>
-          </div>
-        </footer>
+        <SiteFooter />
       </body>
     </html>
   );
