@@ -99,7 +99,7 @@ export const projects: Project[] = [
     title: "Q36.5 — Brand Systems",
     status: "recent-work",
     category: "brand-strategy",
-    role: "Head of Brand &amp; Strategy",
+    role: "Head of Brand & Strategy",
     collaborator: "Marc Vermeeren",
     client: "Q36.5",
     description: [
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     title: "Q36.5 - Growth Operating Model",
     status: "recent-work",
     category: "growth-framework",
-    role: "Head of Brand &amp; Strategy",
+    role: "Head of Brand & Strategy",
     collaborator: "Don van Diest",
     client: "Q36.5",
     description: [
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   },
   {
     slug: "district-vision",
-    title: "District Vision - Brand Narrative &amp; Positioning",
+    title: "District Vision - Brand Narrative & Positioning",
     status: "recent-work",
     category: "positioning",
     role: "Brand Strategy",
@@ -152,11 +152,11 @@ export const projects: Project[] = [
   },
   {
     slug: "q36.5-pro-team",
-    title: "Q36.5 Pro Cycling Team - Brand Strategy &amp; Activation",
+    title: "Q36.5 Pro Cycling Team - Brand Strategy & Activation",
     status: "recent-work",
     category: "brand-strategy",
-    role: "Head of Brand &amp; Strategy",
-    season: "2023 &amp; 2024",
+    role: "Head of Brand & Strategy",
+    season: "2023 & 2024",
     client: "Q36.5 Pro Cycling Team",
     description: [
       "In 2023, I led the full brand and strategy for Q36.5's entry into pro cycling under the umbrella of #RacingTheFuture. Over two seasons I shaped every aspect: from kit design to identity to year-round communication, hero campaigns, and integrating the team as a living embodiment of the brand vision. ",
