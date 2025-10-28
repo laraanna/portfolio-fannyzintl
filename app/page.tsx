@@ -16,7 +16,7 @@ export default function Home() {
       {recentWork.map((p) => (
         <Link
           key={p.slug}
-          href={`/projects/${p.slug}`}
+          href={`/projects/${p.slug.replace(/^project-/, "")}`}
           className="group block"
         >
           {p.cover && (
@@ -47,7 +47,7 @@ export default function Home() {
           {inProgress.map((p) => (
             <Link
               key={p.slug}
-              href={`/projects/${p.slug}`}
+              href={`/projects/${p.slug.replace(/^project-/, "")}`}
               className="group block"
             >
               {p.cover && (
