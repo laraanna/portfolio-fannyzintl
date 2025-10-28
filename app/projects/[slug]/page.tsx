@@ -56,11 +56,14 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {project.gallery && project.gallery.length > 0 && (
         <div className="grid grid-cols-1 gap-6">
-          {project.gallery.map((src, idx) => (
+          {(project.cover && project.gallery[0] === project.cover
+            ? project.gallery.slice(1)
+            : project.gallery
+          ).map((src, idx) => (
             <div key={src + idx}>
               <Image
                 src={src}
-                alt={`${project.title} — ${idx === 0 ? "Hero" : `Image ${idx + 1}`}`}
+                alt={`${project.title} — Image ${idx + 1}`}
                 width={1600}
                 height={900}
                 sizes="100vw"

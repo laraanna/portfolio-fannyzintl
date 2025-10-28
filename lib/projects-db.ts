@@ -95,7 +95,7 @@ export function resolveCover(slug: string, explicit?: string, gallery?: string[]
 // ────────────────────────────────────────────────────────────────────────────────
 export const projects: Project[] = [
   {
-    slug: "project-q36.5-brand",
+    slug: "q36.5-brand",
     title: "Q36.5 — Brand Systems",
     status: "recent-work",
     category: "brand-strategy",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-bmw",
+    slug: "bmw",
     title: "BMW - Marketing Engine",
     status: "recent-work",
     category: "marketing-engine",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-q36.5-growth",
+    slug: "q36.5-growth",
     title: "Q36.5 - Growth Operating Model",
     status: "recent-work",
     category: "growth-framework",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-district-vision",
+    slug: "district-vision",
     title: "District Vision - Brand Narrative &amp; Positioning",
     status: "recent-work",
     category: "positioning",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-q36.5-pro-team",
+    slug: "q36.5-pro-team",
     title: "Q36.5 Pro Cycling Team - Brand Strategy &amp; Activation",
     status: "recent-work",
     category: "brand-strategy",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-beyond-meat",
+    slug: "beyond-meat",
     title: "Beyond Meat - GTM Strategy",
     status: "recent-work",
     category: "gtm-strategy",
@@ -177,7 +177,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-netflix",
+    slug: "netflix",
     title: "Netflix The Witcher - Content Strategy",
     status: "recent-work",
     category: "content strategy",
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-booking.com",
+    slug: "booking.com",
     title: "Booking.com - Brand Campaign",
     status: "recent-work",
     category: "brand campaign",
@@ -205,7 +205,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-n26",
+    slug: "n26",
     title: "N26 - Content Strategy",
     status: "recent-work",
     category: "content strategy",
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "project-naviya",
+    slug: "naviya",
     title: "Naviya - Venture Strategy",
     status: "in-progress",
     category: "venture strategy",
