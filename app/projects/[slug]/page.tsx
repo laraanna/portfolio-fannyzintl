@@ -19,32 +19,17 @@ export default async function ProjectPage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-4xl p-6">
       <div className="mb-8">
-        <div className="text-sm text-neutral-500 mb-2">{project.category}</div>
-        <h1 className="text-3xl font-semibold">{project.title}</h1>
-        <div className="mt-2 text-sm text-neutral-600 space-x-3">
-          {project.role && <span>{project.role}</span>}
-          {project.hiredBy && <span>· Hired by {project.hiredBy}</span>}
-          {project.client && <span>· Client {project.client}</span>}
-          {project.collaborator && <span>· With {project.collaborator}</span>}
-          {project.togetherWith && <span>· Together with {project.togetherWith}</span>}
-          {project.season && <span>· {project.season}</span>}
-          {project.stage && <span>· {project.stage}</span>}
-        </div>
+        <h1 className="text-3xl font-semibold" style={{ wordBreak: 'break-word' }}>
+          {project.title.split(' - ').map((part, index) => (
+            <span key={index} className={index > 0 ? "sm:not-italic italic" : ""}>
+              {index > 0 && <><br className="sm:hidden" /> </>}
+              {part}
+            </span>
+          ))}
+        </h1>
       </div>
 
-      {project.cover && (
-        <div className="mb-10">
-          <Image
-            src={project.cover}
-            alt={project.title}
-            width={1600}
-            height={900}
-            sizes="100vw"
-            className="rounded-2xl w-full h-auto"
-            priority={false}
-          />
-        </div>
-      )}
+
 
       {project.description && project.description.length > 0 && (
         <div className="prose prose-neutral max-w-none mb-10">
@@ -54,11 +39,19 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       )}
 
+<div className="mt-2 text-sm text-neutral-600 space-y-1">
+           {project.role && <div>Role ············· {project.role}</div>}
+           {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
+           {project.client && <div>Client ············· {project.client}</div>}
+           {project.collaborator && <div>Collaborator ············· {project.collaborator}</div>}
+           {project.togetherWith && <div>Together with ············· {project.togetherWith}</div>}
+           {project.season && <div>Season ············· {project.season}</div>}
+           {project.stage && <div>Stage ············· {project.stage}</div>}
+         </div>
+
       {project.gallery && project.gallery.length > 0 && (
         <div className="grid grid-cols-1 gap-6">
-          {(project.cover && project.gallery[0] === project.cover
-            ? project.gallery.slice(1)
-            : project.gallery
+          {(project.gallery
           ).map((src, idx) => (
             <div key={src + idx}>
               <Image
@@ -67,7 +60,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 width={1600}
                 height={900}
                 sizes="100vw"
-                className="rounded-2xl w-full h-auto"
+                className="w-full h-auto"
               />
             </div>
           ))}
