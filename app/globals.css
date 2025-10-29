@@ -24,6 +24,17 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* Utility class for Inter font family */
+.font-inter {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.font-inter-light {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+}
+
 @utility text-2_5xl {
   font-size: 1.75rem; /* 28px */
   line-height: 2.25rem; /* 36px */

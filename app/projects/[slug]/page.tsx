@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       )}
 
-<div className="mt-2 mb-10 text-sm space-y-1 font-light" style={{ fontFamily: 'var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' }}>
+<div className="mt-2 mb-10 text-sm space-y-1 font-inter-light">
            {project.role && <div>Role ············· {project.role}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}

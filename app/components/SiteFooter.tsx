@@ -25,8 +25,8 @@ export default function SiteFooter() {
   }, []);
 
   return (
-    <footer className="border-t border-neutral-200 mt-16">
-      <div className="mx-auto w-[95%] p-6 flex items-center justify-between text-sm text-neutral-600">
+    <footer className="mt-20">
+      <div className="mx-auto w-[95%] p-6 flex items-center justify-between text-xs font-inter-light">
         <div suppressHydrationWarning>
           {isProjectPage
             ? "Thanks for stopping by."
