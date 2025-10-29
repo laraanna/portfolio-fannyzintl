@@ -17,11 +17,16 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <main className="mx-auto max-w-4xl p-6">
+    <main className="mx-auto w-[95%] px-3 py-6">
       <div className="mb-8">
-        <h1 className="text-3xl" style={{ wordBreak: 'break-word', fontFamily: 'var(--font-iowan), serif' }}>
+        
+        <h1 className="text-3xl" style={{ wordBreak: 'break-word' }}>
           {project.title.split(' - ').map((part, index) => (
-            <span key={index} className={index > 0 ? "sm:not-italic italic" : ""}>
+            <span 
+              key={index} 
+              className={index > 0 ? "sm:not-italic italic" : ""}
+              style={{ fontFamily: 'var(--font-iowan), serif' }}
+            >
               {index > 0 && <><br className="sm:hidden" /> </>}
               {part}
             </span>
@@ -87,6 +92,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     height={900}
                     sizes="100vw"
                     className="w-full h-auto"
+                    priority={idx === 0}
+                    loading={idx === 0 ? "eager" : undefined}
                   />
                 )}
               </div>

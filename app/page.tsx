@@ -8,7 +8,7 @@ export default function Home() {
   const inProgress = projects.filter((p) => p.status === "in-progress");
 
   return (
-    <main className="mx-auto max-w-6xl p-6">
+    <main className="mx-auto w-[95%] px-3 py-6">
     <h1 className="text-4xl font-bold mb-6">I build and grow brands.</h1>
     <h2 className="text-3xl font-semibold mb-6">Recent work</h2>
 

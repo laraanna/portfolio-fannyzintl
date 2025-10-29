@@ -16,7 +16,7 @@ export default function AboutPage() {
     "Innovation Roadmaps",
   ];
   return (
-    <main className="mx-auto max-w-6xl p-6 space-y-12">
+    <main className="mx-auto w-[95%] px-3 py-6 space-y-12">
       <section id="section-about" className="border-b border-neutral-200 pb-8">
         <div className="relative group">
           <div className="pr-[380px]">

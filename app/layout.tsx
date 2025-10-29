@@ -26,15 +26,21 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${iowan.variable} antialiased`}
       >
-        <header className="border-b border-neutral-200">
-          <div className="mx-auto max-w-6xl p-6 flex items-center justify-between">
-            <Link href="/" className="text-base font-semibold">
+        <header>
+          <div className="mx-auto w-[95%] px-3 py-4 flex items-center justify-between">
+            <Link
+              href="/"
+              className="font-semibold text-xl md:text-2xl"
+              style={{ fontFamily: 'var(--font-iowan), serif' }}
+            >
               Fanny Zintl
             </Link>
-            <nav className="flex items-center gap-6 text-sm">
-              <Link href="/about" className="hover:underline">About</Link>
-              <Link href="/about#section-services" className="hover:underline">Services</Link>
-              <Link href="/about#section-contact" className="hover:underline">Contact</Link>
+            <nav className="text-sm">
+              <div className="bg-[#F3F3F3] rounded-full px-3 py-1 flex items-center gap-3">
+                <Link href="/about" className="hover:underline px-1 py-0.5 rounded-full">About</Link>
+                <Link href="/about#section-services" className="hover:underline px-1 py-0.5 rounded-full">Services</Link>
+                <Link href="/about#section-contact" className="hover:underline px-1 py-0.5 rounded-full">Contact</Link>
+              </div>
             </nav>
           </div>
         </header>
