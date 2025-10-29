@@ -17,10 +17,10 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <main className="mx-auto w-[95%] px-3 py-6">
-      <div className="mb-8">
+    <main className="mx-auto w-[95%] px-8 pt-11 pb-6">
+      <div className="mb-10">
         
-        <h1 className="text-3xl" style={{ wordBreak: 'break-word' }}>
+        <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl" style={{ wordBreak: 'break-word' }}>
           {project.title.split(' - ').map((part, index) => (
             <span 
               key={index} 
@@ -39,12 +39,12 @@ export default async function ProjectPage({ params }: PageProps) {
       {project.description && project.description.length > 0 && (
         <div className="prose prose-neutral max-w-none mb-10">
           {project.description.map((paragraph, idx) => (
-            <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
+            <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} className="mb-6" />
           ))}
         </div>
       )}
 
-<div className="mt-2 text-sm text-neutral-600 space-y-1">
+<div className="mt-2 mb-10 text-sm space-y-1 font-light" style={{ fontFamily: 'var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' }}>
            {project.role && <div>Role ············· {project.role}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}

@@ -23,3 +23,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
+
+@utility text-2_5xl {
+  font-size: 1.75rem; /* 28px */
+  line-height: 2.25rem; /* 36px */
+}

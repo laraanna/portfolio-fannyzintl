@@ -27,15 +27,15 @@ export default function RootLayout({
         className={`${inter.variable} ${iowan.variable} antialiased`}
       >
         <header>
-          <div className="mx-auto w-[95%] px-3 py-4 flex items-center justify-between">
+          <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
             <Link
               href="/"
-              className="font-semibold text-xl md:text-2xl"
+              className="text-2xl md:text-2xl italic"
               style={{ fontFamily: 'var(--font-iowan), serif' }}
             >
               Fanny Zintl
             </Link>
-            <nav className="text-sm">
+            <nav className="text-xs">
               <div className="bg-[#F3F3F3] rounded-full px-3 py-1 flex items-center gap-3">
                 <Link href="/about" className="hover:underline px-1 py-0.5 rounded-full">About</Link>
                 <Link href="/about#section-services" className="hover:underline px-1 py-0.5 rounded-full">Services</Link>
