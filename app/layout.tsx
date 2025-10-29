@@ -31,6 +31,11 @@ export default function RootLayout({
             <Link href="/" className="text-base font-semibold">
               Fanny Zintl
             </Link>
+            <nav className="flex items-center gap-6 text-sm">
+              <Link href="/about" className="hover:underline">About</Link>
+              <Link href="/about#section-services" className="hover:underline">Services</Link>
+              <Link href="/about#section-contact" className="hover:underline">Contact</Link>
+            </nav>
           </div>
         </header>
         {children}
