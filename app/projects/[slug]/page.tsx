@@ -19,7 +19,7 @@ export default async function ProjectPage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-4xl p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-semibold" style={{ wordBreak: 'break-word' }}>
+        <h1 className="text-3xl" style={{ wordBreak: 'break-word', fontFamily: 'var(--font-iowan), serif' }}>
           {project.title.split(' - ').map((part, index) => (
             <span key={index} className={index > 0 ? "sm:not-italic italic" : ""}>
               {index > 0 && <><br className="sm:hidden" /> </>}
@@ -51,19 +51,47 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {project.gallery && project.gallery.length > 0 && (
         <div className="grid grid-cols-1 gap-6">
-          {(project.gallery
-          ).map((src, idx) => (
-            <div key={src + idx}>
-              <Image
-                src={src}
-                alt={`${project.title} — Image ${idx + 1}`}
-                width={1600}
-                height={900}
-                sizes="100vw"
-                className="w-full h-auto"
-              />
-            </div>
-          ))}
+          {project.gallery.map((src, idx) => {
+            const lower = src.toLowerCase();
+            const isVimeo = lower.includes("vimeo.com");
+            const isFileVideo =
+              lower.endsWith(".mp4") ||
+              lower.endsWith(".webm") ||
+              lower.endsWith(".mov") ||
+              lower.endsWith(".m4v");
+
+            return (
+              <div key={src + idx}>
+                {isVimeo ? (
+                  <div className="w-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                    <iframe
+                      src={src.includes("player.vimeo.com") ? src : src.replace("vimeo.com/", "player.vimeo.com/video/")}
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      title={`${project.title} — Video ${idx + 1}`}
+                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+                    />
+                  </div>
+                ) : isFileVideo ? (
+                  <video
+                    className="w-full h-auto"
+                    src={src}
+                    controls
+                    playsInline
+                  />
+                ) : (
+                  <Image
+                    src={src}
+                    alt={`${project.title} — Image ${idx + 1}`}
+                    width={1600}
+                    height={900}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
     </main>

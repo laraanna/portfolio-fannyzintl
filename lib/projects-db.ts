@@ -203,6 +203,12 @@ export const projects: Project[] = [
       "As strategic lead, I shaped the campaign framework, building a modular system that could flex across audiences while staying anchored in one story. Working with employees across three continents, we surfaced insider humor and cultural nuances that revealed Booking's trademark diversity and sense of community: from a programmer’s debugging rubber duck to customer service anecdotes, every detail made the brand feel human, relatable, and globally connected.",
       "The result was a campaign that turned employee experience into the strongest proof point of the employer brand, inspiring recruits by showing that working at Booking.com is itself a horizon-expanding experience."
     ],
+    cover: "/projects/booking.com/booking.com-3.jpg",
+    gallery: [
+      "https://vimeo.com/656141775",
+      "https://vimeo.com/656143017",
+      "/projects/booking.com/booking.com-3.jpg",
+    ]
   },
   {
     slug: "n26",
