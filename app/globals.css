@@ -29,6 +29,23 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* Responsive project gallery layout */
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+
+@media (min-width: 768px) {
+  .project-gallery {
+    display: grid;
+  }
+  
+  .project-gallery-item {
+    grid-area: var(--grid-area);
+  }
+}
+
 .font-inter-light {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 300;

@@ -46,6 +46,20 @@ export type Project = {
   // If you leave `gallery` undefined, we'll auto-scan the folder (hero + numbered images)
   cover?: string; // relative to /public (e.g. "/projects/<slug>/hero.jpg")
   gallery?: string[]; // relative to /public
+  // Layout for gallery images
+  layout?: {
+    columns: string[]; // e.g. ["1fr", "1fr", "1fr"] or ["2fr", "1fr", "2fr"]
+    rows: string[];    // e.g. ["auto", "200px", "auto"]
+    gap: number;
+    images: Array<{
+      src: string;
+      gridArea: string; // e.g. "1 / 2 / 3 / 4" (row-start / col-start / row-end / col-end)
+      absolute?: boolean; // centers image absolutely within grid area
+      wFull?: boolean; // applies w-full class (default true)
+      hFull?: boolean; // applies h-full class (default true)
+      padding?: string; // CSS padding value (e.g. "10px", "1rem 2rem")
+    }>;
+  };
   // Extra fields as needed
   description?: string[];
   tags?: string[];
@@ -149,6 +163,21 @@ export const projects: Project[] = [
       "By embedding Meditation in Motion deeply into brand strategy, we ensured it wasn't a tagline or campaign. It became the lens through which all creative decisions passed.",
       "It remains the brand's guiding ethos today, shaping every campaign and product story. The recent creative work here is a direct continuation of that foundation, proof of a strategy built to endure and evolve."
     ],
+    layout: {
+      columns: ["1fr", "1fr", "1fr", "1fr"],
+      rows: ["1fr", "1fr", "1fr", "1fr", "auto", "1fr"],
+      gap: 0,
+      images: [
+        { src: "/projects/district-vision/district-vision-1.jpg", gridArea: "1 / 3 / auto / span 2", wFull: true },
+        { src: "/projects/district-vision/district-vision-2.jpg", gridArea: "1 / 1 / span 2 / span 2",absolute: true, wFull: true, hFull: false },
+        { src: "/projects/district-vision/district-vision-3.jpg", gridArea: "2 / 3 / auto / span 2", wFull: true },
+        { src: "/projects/district-vision/district-vision-4.jpg", gridArea: "3 / 1 / 3 / 1", wFull: true, hFull: false },
+        { src: "/projects/district-vision/district-vision-5.jpg", gridArea: "3 / 2 / auto / span 2", wFull: true, hFull: false, padding: "60px 0px 5px 50px" },
+        { src: "/projects/district-vision/district-vision-6.jpg", gridArea: "4 / 1 / auto / span 2" },
+        { src: "/projects/district-vision/district-vision-7.png", gridArea: "5 / 2 / auto / span 3", wFull: true, hFull: false, padding: "0px 200px 0px 30px" },
+        { src: "/projects/district-vision/district-vision-8.jpg", gridArea: "6 / 2 / auto / span 2" },
+      ],
+    },
   },
   {
     slug: "q36.5-pro-team",
