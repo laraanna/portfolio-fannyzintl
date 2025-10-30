@@ -17,7 +17,7 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <main className="mx-auto w-[95%] px-16
+    <main className="mx-auto w-[95%] px-8 md:px-16
      pt-11 pb-6">
      
       <div className="mb-10 md:max-w-[50%]">
@@ -82,7 +82,7 @@ export default async function ProjectPage({ params }: PageProps) {
                     style={{
                       gridArea: image.gridArea,
                       padding: image.padding || '30px'
-                    } as React.CSSProperties}
+                    } as React.CSSProperties & { '--mobile-padding': string }}
                   >
                     {isVimeo ? (
                       <div className="w-full h-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
@@ -109,7 +109,6 @@ export default async function ProjectPage({ params }: PageProps) {
                         height={900}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
-                        style={image.absolute ? { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" } : {}}
                         priority={idx === 0}
                         loading={idx === 0 ? "eager" : undefined}
                       />
