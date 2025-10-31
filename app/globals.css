@@ -50,7 +50,7 @@ body {
 }
 .project-gallery-item {
   grid-area: unset !important;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .project-gallery-item > img {

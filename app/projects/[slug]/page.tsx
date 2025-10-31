@@ -17,28 +17,37 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <main className="mx-auto w-[95%] px-8 md:px-16
+    <main className="mx-auto w-[95%] px-9 md:px-16
      pt-11 pb-6">
      
       <div className="mb-10 md:max-w-[50%]">
-        <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl" style={{ wordBreak: 'break-word' }}>
-          {project.title.split(' - ').map((part, index) => (
-            <span 
-              key={index} 
-              className={index > 0 ? "sm:not-italic italic" : ""}
-              style={{ fontFamily: 'var(--font-iowan), serif' }}
-            >
-              {index > 0 && <><br className="sm:hidden" /> </>}
-              {part}
-            </span>
-          ))}
+        <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl font-iowan" style={{ wordBreak: 'break-word' }}>
+          <span className="hidden sm:inline">
+            {project.title.split(' - ').map((part, index) => (
+              <span key={index} className={index > 0 ? "italic" : ""}>
+                {index > 0 && " - "}
+                {part}
+              </span>
+            ))}
+          </span>
+          <span className="sm:hidden">
+            {project.title.split(' - ').map((part, index) => (
+              <span 
+                key={index} 
+                className={index > 0 ? "italic" : ""}
+              >
+                {index > 0 && <><br /> </>}
+                {part}
+              </span>
+            ))}
+          </span>
         </h1>
       </div>
 
 
 
       {project.description && project.description.length > 0 && (
-        <div className="prose prose-neutral max-w-none mb-10 md:max-w-[50%]">
+        <div className="text-sm md:text-base max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
           {project.description.map((paragraph, idx) => (
             <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} className="mb-6" />
           ))}
