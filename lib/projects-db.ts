@@ -29,6 +29,7 @@ export type Category =
 export type Project = {
   slug: string; // must match folder in /public/projects/<slug>
   title: string; 
+  brand: string;
   status: Status; 
   role: string;
   hiredBy?: string;
@@ -111,6 +112,7 @@ export const projects: Project[] = [
   {
     slug: "q36.5-brand",
     title: "Q36.5 — Brand Systems",
+    brand: "Q36.5",
     status: "recent-work",
     category: "brand-strategy",
     role: "Head of Brand & Strategy",
@@ -166,6 +168,7 @@ export const projects: Project[] = [
   {
     slug: "bmw",
     title: "BMW - Marketing Engine",
+    brand: "BMW",
     status: "recent-work",
     category: "marketing-engine",
     role: "Strategy Director",
@@ -209,6 +212,7 @@ export const projects: Project[] = [
   {
     slug: "q36.5-growth",
     title: "Q36.5 - Growth Operating Model",
+    brand: "Q36.5",
     status: "recent-work",
     category: "growth-framework",
     role: "Head of Brand & Strategy",
@@ -223,6 +227,7 @@ export const projects: Project[] = [
   {
     slug: "district-vision",
     title: "District Vision - Brand Narrative & Positioning",
+    brand: "District Vision",
     status: "recent-work",
     category: "positioning",
     role: "Brand Strategy",
@@ -253,6 +258,7 @@ export const projects: Project[] = [
   {
     slug: "q36.5-pro-team",
     title: "Q36.5 Pro Cycling Team - Brand Strategy & Activation",
+    brand: "Q36.5",
     status: "recent-work",
     category: "brand-strategy",
     role: "Head of Brand & Strategy",
@@ -266,6 +272,7 @@ export const projects: Project[] = [
   {
     slug: "beyond-meat",
     title: "Beyond Meat - GTM Strategy",
+    brand: "Beyond Meat",
     status: "recent-work",
     category: "gtm-strategy",
     role: "Strategy Lead",
@@ -295,6 +302,7 @@ export const projects: Project[] = [
   {
     slug: "netflix",
     title: "Netflix The Witcher - Content Strategy",
+    brand: "Netflix",
     status: "recent-work",
     category: "content strategy",
     role: "Strategy Lead",
@@ -309,6 +317,7 @@ export const projects: Project[] = [
   {
     slug: "booking.com",
     title: "Booking.com - Brand Campaign",
+    brand: "Booking.com",
     status: "recent-work",
     category: "brand campaign",
     role: "Strategy Lead",
@@ -329,6 +338,7 @@ export const projects: Project[] = [
   {
     slug: "n26",
     title: "N26 - Content Strategy",
+    brand: "N26",
     status: "recent-work",
     category: "content strategy",
     role: "Strategy Lead",
@@ -359,6 +369,7 @@ export const projects: Project[] = [
   {
     slug: "naviya",
     title: "Naviya - Venture Strategy",
+    brand: "Naviya",
     status: "in-progress",
     category: "venture strategy",
     role: "Founding Team",

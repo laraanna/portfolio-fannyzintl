@@ -13,8 +13,8 @@ export const iowan = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-iowan",
-  display: "swap",
+  // variable: "--font-iowan",
+  // display: "swap",
 });
 
 

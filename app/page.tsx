@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getAllProjects } from "@/lib/projects-db";
 
@@ -9,69 +8,50 @@ export default function Home() {
 
   return (
     <main className="mx-auto w-[95%] px-3 py-6">
-    <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6">I build and grow brands.</h1>
-    <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">Recent work</h2>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      {recentWork.map((p) => (
-        <Link
-          key={p.slug}
-          href={`/projects/${p.slug.replace(/^project-/, "")}`}
-          className="group block"
-        >
-          {p.cover && (
-            <Image
-              src={p.cover}
-              alt={p.title}
-              width={1600}
-              height={900}
-              sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-              className="rounded-2xl"
-              priority={false}
-            />
-          )}
-          <div className="mt-2 text-sm text-neutral-500">
-            {p.category}
-          </div>
-          <h3 className="text-lg font-medium group-hover:underline">
-            {p.title}
-          </h3>
-        </Link>
-      ))}
-    </div>
-
-    {inProgress.length > 0 && (
-      <>
-        <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">In progress</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {inProgress.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/projects/${p.slug}`}
-              className="group block"
-            >
-              {p.cover && (
-                <Image
-                  src={p.cover}
-                  alt={p.title}
-                  width={1600}
-                  height={900}
-                  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                  className="rounded-2xl"
-                  priority={false}
-                />
-              )}
-              <div className="mt-2 text-sm text-neutral-500">
-                {p.category}
-              </div>
-              <h3 className="text-lg font-medium group-hover:underline">
-                {p.title}
-              </h3>
-            </Link>
-          ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6">I build and grow brands.</h1>
         </div>
-      </>
-    )}
-  </main>
+        <div>
+          <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">Recent work</h2>
+
+          <div className="grid grid-cols-1 gap-6 mb-12">
+            {recentWork.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/projects/${p.slug.replace(/^project-/, "")}`}
+                className="group block"
+              >
+                <div className="mt-2 text-sm">
+                  <span className="font-medium">{p.brand}</span>
+                  <span className="font-medium"> {p.category}</span> 
+                </div>
+           
+              </Link>
+            ))}
+          </div>
+
+          {inProgress.length > 0 && (
+            <>
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">In progress</h2>
+              <div className="grid grid-cols-1 gap-6">
+                {inProgress.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/projects/${p.slug}`}
+                    className="group block"
+                  >
+                     <div className="mt-2 text-sm">
+                  <span className="font-medium">{p.brand}</span>
+                  <span className="font-medium"> {p.category}</span> 
+                </div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </main>
   );
 }

@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import SiteFooter from "./components/SiteFooter";
 import { iowan } from "./fonts";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+
 
 
 export const metadata: Metadata = {
@@ -24,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${iowan.variable} antialiased`}
+        className={iowan.className}
       >
         <header>
           <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
