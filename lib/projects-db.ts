@@ -340,7 +340,7 @@ export const projects: Project[] = [
     title: "N26 - Content Strategy",
     brand: "N26",
     status: "recent-work",
-    category: "content strategy",
+    category: "content-strategy",
     role: "Strategy Lead",
     hiredBy: ".Monks",
     client: "N26",
