@@ -72,7 +72,7 @@ const PUBLIC_DIR = path.join(process.cwd(), "public");
 const PROJECTS_DIR = path.join(PUBLIC_DIR, "projects");
 
 // Helper: safe list of image extensions we care about
-const IMG_EXTS = new Set([".jpg", ".jpeg", ".png"]);
+const IMG_EXTS = new Set([".jpg", ".jpeg", ".png", ".gif"]);
 
 // Auto-scan a project's folder and return a sorted gallery list.
 // Priority order: hero.* first (if present), then 01.*, 02.*, ..., then others by name.
@@ -121,6 +121,47 @@ export const projects: Project[] = [
       "The narrative was rooted in the brand's DNA: Quaerere (research) and 36.5 (the optimal human body temperature). From this foundation we created a brand story where every product amplifies human potential: seeing gear as performance technology, not just clothing.",
       "The result was an aligned brand, product and marketing strategy that fueled global visibility and delivered 200% year-on-year growth."
     ],
+    gallery: [
+      "/projects/q36.5-brand/q36.5-brand-1.jpg",
+      "https://vimeo.com/1121475738g",
+      "/projects/q36.5-brand/q36.5-brand-3.jpg",
+      "/projects/q36.5-brand/q36.5-brand-4.jpg",
+      "/projects/q36.5-brand/q36.5-brand-5.jpg",
+      "/projects/q36.5-brand/q36.5-brand-6.jpg",
+      "/projects/q36.5-brand/q36.5-brand-7.jpg",
+      "https://vimeo.com/1126161422",
+      "/projects/q36.5-brand/q36.5-brand-9.jpg",
+      "/projects/q36.5-brand/q36.5-brand-10.jpg",
+      "/projects/q36.5-brand/q36.5-brand-11.jpg",
+      "/projects/q36.5-brand/q36.5-brand-12.jpg",
+      "/projects/q36.5-brand/q36.5-brand-13.jpg",
+      "/projects/q36.5-brand/q36.5-brand-14.jpg",
+      "https://vimeo.com/1129332458",
+      "/projects/q36.5-brand/q36.5-brand-16.jpg",
+    ],
+    layout: {
+      columns: ["1fr", "1fr"],
+      rows: ["auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/q36.5-brand/q36.5-brand-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/1121475738g", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-3.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-4.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-5.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-6.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-7.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/1126161422", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-9.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-10.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-11.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-12.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-13.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-14.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/1129332458", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/q36.5-brand/q36.5-brand-16.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+      ],
+    },
   },
   {
     slug: "bmw",
@@ -134,6 +175,36 @@ export const projects: Project[] = [
       "In 2020 BMW Group awarded .Monks the lead for its pan-European marketing across BMW and MINI.",
       "I was part of the strategy taskforce that designed the operating model behind the account: a high-performance marketing engine combining creativity, data, media and consulting. It powered campaigns like BMW i4 Edge Electrified, MINIWOOD virtual production, and the award-winning Lil Miquela Make it Real campaign, showing that scale and creativity can live side by side."
     ],
+    cover: "/projects/bmw/bmw-2.jpg",
+    gallery: [
+      "https://vimeo.com/1128840100",
+      "/projects/bmw/bmw-2.jpg",
+      "/projects/bmw/bmw-3.jpg",
+      "/projects/bmw/bmw-4.jpg",
+      "/projects/bmw/bmw-5.jpg",
+      "/projects/bmw/bmw-6.jpg",
+      "/projects/bmw/bmw-7.mp4",
+      "/projects/bmw/bmw-8.mp4",
+      "/projects/bmw/bmw-9.mp4",
+      "https://vimeo.com/1128970837",
+    ],
+    layout: {
+      columns: ["1fr", "1fr"],
+      rows: ["auto"],
+      gap: 0,
+      images: [
+        { src: "https://vimeo.com/1128840100", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-2.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-3.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-4.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-5.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-6.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-7.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-8.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/bmw/bmw-9.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/1128970837", gridArea: "1 / 1 / auto / span 2", wFull: true },
+      ],
+    },
   },
   {
     slug: "q36.5-growth",
@@ -204,6 +275,22 @@ export const projects: Project[] = [
       "As digital agency of record for Beyond Meat in the US and Europe, we expanded on the brand's core idea of Going Beyond. While the business had initially focused on B2B growth, in mid 2020 we defined a distinct B2C approach that could scale globally while resonating locally.",
       "I led the social first content strategy that built a coherent and impactful global presence, tailored to cultural nuances in key markets. This work brought plant based food from shelves to dinner plates in Germany, the UK and the Netherlands, establishing Beyond Meat not just as a product but as a thought leader in the plant-based movement."
     ],
+    cover: "/projects/beyond-meat/beyond-meat-2.jpg",
+
+    layout: {
+      columns: ["1fr", "1fr", "1fr", "1fr"],
+      rows: ["1fr", "1fr", "1fr", "1fr", "auto", "1fr"],
+      gap: 0,
+      images: [
+        { src: "/projects/beyond-meat/beyond-meat-1.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-2.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-3.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-4.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-5.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-6.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-7.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+      ],
+    },
   },
   {
     slug: "netflix",
@@ -252,6 +339,22 @@ export const projects: Project[] = [
       "I built a YouTube-first content strategy that reframed finances as a tool to achieve goals, then used audience insights, trending searches and behavioral data to shape talking tracks that cut through jargon and addressed real frustrations.",
       "Through a smart production model with weekly shoots in a branded studio, N26 reached an average of 280k views per video and positioned itself as a leading voice in the finance conversation on YouTube."
     ],
+    cover: "/projects/beyond-meat/beyond-meat-2.jpg",
+    gallery: [
+      "https://www.youtube.com/watch?v=TSJyetG4SBU",
+      "https://www.youtube.com/watch?v=AXYlnyCUETU",
+      "https://www.youtube.com/watch?v=b_7M1byjEbE",
+    ],
+    layout: {
+      columns: ["1fr", "1fr", "1fr", "1fr"],
+      rows: ["1fr", "1fr", "1fr", "1fr", "auto", "1fr"],
+      gap: 0,
+      images: [
+        { src: "https://www.youtube.com/watch?v=TSJyetG4SBU", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://www.youtube.com/watch?v=AXYlnyCUETU", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://www.youtube.com/watch?v=b_7M1byjEbE", gridArea: "1 / 1 / auto / span 2", wFull: true },
+      ],
+    },
   },
   {
     slug: "naviya",

@@ -69,6 +69,7 @@ export default async function ProjectPage({ params }: PageProps) {
               {project.layout.images.map((image, idx) => {
                 const lower = image.src.toLowerCase();
                 const isVimeo = lower.includes("vimeo.com");
+                const isYouTube = lower.includes("youtube.com");
                 const isFileVideo =
                   lower.endsWith(".mp4") ||
                   lower.endsWith(".webm") ||
@@ -88,6 +89,16 @@ export default async function ProjectPage({ params }: PageProps) {
                       <div className="w-full h-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
                         <iframe
                           src={image.src.includes("player.vimeo.com") ? image.src : image.src.replace("vimeo.com/", "player.vimeo.com/video/")}
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`${project.title} — Video ${idx + 1}`}
+                          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+                        />
+                      </div>
+                    ) : isYouTube ? (
+                      <div className="w-full h-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                        <iframe
+                          src={image.src.replace("watch?v=", "embed/").replace("youtube.com", "youtube.com")}
                           allow="autoplay; fullscreen; picture-in-picture"
                           allowFullScreen
                           title={`${project.title} — Video ${idx + 1}`}
