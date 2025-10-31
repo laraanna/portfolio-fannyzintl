@@ -29,6 +29,11 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* Utility class for Iowan Old Style font family */
+.font-iowan {
+  font-family: var(--font-iowan), serif;
+}
+
 
 
 @media (max-width: 767px) {

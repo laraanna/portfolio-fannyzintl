@@ -16,9 +16,9 @@ export type Category =
   | "positioning"
   | "brand-strategy"
   | "gtm-strategy"
-  | "content strategy"
-  | "brand campaign"
-  | "venture strategy";
+  | "content-strategy"
+  | "brand-campaign"
+  | "venture-strategy";
 
 
   export type Status =
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     title: "Q36.5 — Brand Systems",
     brand: "Q36.5",
     status: "recent-work",
-    category: "brand-strategy",
+    category: "brand-system",
     role: "Head of Brand & Strategy",
     collaborator: "Marc Vermeeren",
     client: "Q36.5",
@@ -304,7 +304,7 @@ export const projects: Project[] = [
     title: "Netflix The Witcher - Content Strategy",
     brand: "Netflix",
     status: "recent-work",
-    category: "content strategy",
+    category: "content-strategy",
     role: "Strategy Lead",
     hiredBy: ".Monks",
     client: "Netflix",
@@ -319,7 +319,7 @@ export const projects: Project[] = [
     title: "Booking.com - Brand Campaign",
     brand: "Booking.com",
     status: "recent-work",
-    category: "brand campaign",
+    category: "brand-campaign",
     role: "Strategy Lead",
     hiredBy: ".Monks",
     client: "Booking.com",
@@ -371,7 +371,7 @@ export const projects: Project[] = [
     title: "Naviya - Venture Strategy",
     brand: "Naviya",
     status: "in-progress",
-    category: "venture strategy",
+    category: "venture-strategy",
     role: "Founding Team",
     togetherWith: "Marc Vermeeren",
     stage: "Pre Seed",

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 export default function SiteFooter() {
   const pathname = usePathname();
   const isProjectPage = pathname?.startsWith("/projects/") ?? false;
+  const isHomePage = pathname === "/";
 
   const [amsterdamTime, setAmsterdamTime] = useState<string>("");
 
@@ -25,7 +26,7 @@ export default function SiteFooter() {
   }, []);
 
   return (
-    <footer className="mt-20">
+    <footer className={isHomePage ? "md:fixed md:bottom-0 md:left-0 md:right-0 bg-white z-50" : " mt-20"}>
       <div className="mx-auto w-[95%] p-6 flex items-center justify-between text-xs font-inter-light">
         <div suppressHydrationWarning>
           {isProjectPage

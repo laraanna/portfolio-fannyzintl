@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
+import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
-import { iowan } from "./fonts";
+import { inter, iowan } from "./fonts";
 
 
 
@@ -20,26 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={iowan.className}
+        className={`${inter.variable} ${iowan.variable} antialiased`}
       >
-        <header>
-          <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
-            <Link
-              href="/"
-              className="text-2xl md:text-3xl lg:text-5xl  italic"
-              style={{ fontFamily: 'var(--font-iowan), serif' }}
-            >
-              Fanny Zintl
-            </Link>
-            <nav className="text-xs md:text-sm lg:text-lg">
-              <div className="bg-[#F3F3F3] rounded-full px-3 py-1 flex items-center gap-3">
-                <Link href="/about" className="hover:underline px-1 py-0.5 rounded-full">About</Link>
-                <Link href="/about#section-services" className="hover:underline px-1 py-0.5 rounded-full">Services</Link>
-                <Link href="/about#section-contact" className="hover:underline px-1 py-0.5 rounded-full">Contact</Link>
-              </div>
-            </nav>
-          </div>
-        </header>
+        <SiteHeader />
         {children}
         <SiteFooter />
       </body>

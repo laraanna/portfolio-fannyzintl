@@ -1,4 +1,11 @@
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
+
+export const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const iowan = localFont({
   src: [
@@ -13,8 +20,8 @@ export const iowan = localFont({
       style: "italic",
     },
   ],
-  // variable: "--font-iowan",
-  // display: "swap",
+  variable: "--font-iowan",
+  display: "swap",
 });
 
 
