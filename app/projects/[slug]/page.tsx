@@ -108,7 +108,7 @@ export default async function ProjectPage({ params }: PageProps) {
                     } as React.CSSProperties & { '--mobile-padding': string }}
                   >
                     {isVimeo ? (
-                      <div className="w-full h-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                      <div className="w-full h-full" style={{ position: "relative", paddingBottom: image.aspectRatio === "9:16" ? "177.78%" : "56.25%", height: 0 }}>
                         <iframe
                           src={image.src.includes("player.vimeo.com") ? image.src : image.src.replace("vimeo.com/", "player.vimeo.com/video/")}
                           allow="autoplay; fullscreen; picture-in-picture"
@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         />
                       </div>
                     ) : isYouTube ? (
-                      <div className="w-full h-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                      <div className="w-full h-full" style={{ position: "relative", paddingBottom: image.aspectRatio === "9:16" ? "177.78%" : "56.25%", height: 0 }}>
                         <iframe
                           src={image.src.replace("watch?v=", "embed/").replace("youtube.com", "youtube.com")}
                           allow="autoplay; fullscreen; picture-in-picture"

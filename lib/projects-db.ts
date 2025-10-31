@@ -63,6 +63,7 @@ export type Project = {
       padding?: string; // CSS padding value (e.g. "10px", "1rem 2rem")
       caption?: string; // optional caption text below image
       mobileHidden?: boolean; // hide image on mobile screens
+      aspectRatio?: "16:9" | "9:16"; // aspect ratio for videos (default 16:9)
     }>;
   };
   // Extra fields as needed
@@ -273,6 +274,30 @@ export const projects: Project[] = [
       "In 2023, I led the full brand and strategy for Q36.5's entry into pro cycling under the umbrella of #RacingTheFuture. Over two seasons I shaped every aspect: from kit design to identity to year-round communication, hero campaigns, and integrating the team as a living embodiment of the brand vision. ",
       "Under my direction, brand and performance merged. We aligned Q36.5's technical DNA with a compelling narrative that the team isn't just sponsored, it is the brand in action."
     ],
+    layout: {
+      columns: ["1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-1.jpg", gridArea: "1 / 1 / auto / auto", wFull: true, padding: "0px 0px 0px 150px" },
+        { src: "https://vimeo.com/1121475738", gridArea: "2 / 1 / auto / auto", wFull: true, padding: "150px 0px 0px 0px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-3.jpg", gridArea: "1 / 2 / auto / auto", wFull: true, padding: "250px 0px 250px 50px", width: "90%", hFull: false },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-4.jpg", gridArea: "2 / 2 / span 2 / auto", wFull: true, padding: "400px 100px 0px 100px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-5.jpg", gridArea: "3 / 1 / span 2 / auto", wFull: true, padding: "350px 100px 150px 250px" , mobileHidden: true, hFull: false },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-6.jpg", gridArea: "4 / 2 / span 2 / auto", wFull: true, padding: "150px 0px 50px 0px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-7.jpg", gridArea: "5 / 1 / auto / auto", wFull: true, padding: "0px 150px 0px 0px", mobileHidden: true},
+        { src: "https://vimeo.com/1126161422", gridArea: "6 / 2 / auto / auto", wFull: true, aspectRatio: "9:16", padding: "150px 100px 0px 100px"},
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-9.jpg", gridArea: "6 / 1 / auto / auto", wFull: true, mobileHidden: true, width: "50%", hFull: false,padding: "350px 0px 0px 0px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-10.jpg", gridArea: "7 / 1 / auto / auto", wFull: true, mobileHidden: true, width: "85%" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-11.jpg", gridArea: "8 / 1 / auto / auto", wFull: true, width: "70%", padding: "250px 0px 150px 0px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-12.jpg", gridArea: "7 / 2 / auto / auto", wFull: true, padding: "0px 250px 0px 30px", absolute: true, alignment: "bottom", width: "50%", hFull: false },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-13.jpg", gridArea: "9 / 1 / span 2 / auto", wFull: true, padding: "0px 250px 0px 30px", mobileHidden: true },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-14.jpg", gridArea: "10 / 2 / span 2 / auto", wFull: true, padding: "0px 200px 0px 0px" },
+        { src: "https://vimeo.com/1129332458", gridArea: "8 / 2 / span 2 / auto", wFull: true, aspectRatio: "9:16", padding: "550px 200px 0px 50px" },
+        { src: "/projects/q36.5-pro-team/q36.5-pro-team-16.jpg", gridArea: "12 / 1 / auto / span 2", wFull: true, padding: "150px 0px 0px 0px" },
+
+      ],
+    },
   },
   {
     slug: "beyond-meat",
@@ -391,13 +416,13 @@ export const projects: Project[] = [
       "https://www.youtube.com/watch?v=b_7M1byjEbE",
     ],
     layout: {
-      columns: ["1fr", "1fr", "1fr", "1fr"],
-      rows: ["1fr", "1fr", "1fr", "1fr", "auto", "1fr"],
+      columns: ["2fr", "1fr", "2fr"],
+      rows: ["auto", "auto", "auto"],
       gap: 0,
       images: [
         { src: "https://www.youtube.com/watch?v=TSJyetG4SBU", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "https://www.youtube.com/watch?v=AXYlnyCUETU", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "https://www.youtube.com/watch?v=b_7M1byjEbE", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://www.youtube.com/watch?v=AXYlnyCUETU", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "150px 0px 150px 0px" },
+        { src: "https://www.youtube.com/watch?v=b_7M1byjEbE", gridArea: "3 / 1 / auto / span 2", wFull: true },
       ],
     },
   },
