@@ -54,7 +54,20 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       )}
 
-<div className="mt-2 mb-10 text-sm space-y-1 font-inter-light">
+      {project.awards && (
+        <div className="mb-10 md:max-w-[50%] lg:max-w-[40%]">
+          <Image
+            src={project.awards}
+            alt={`${project.title} — Awards`}
+            width={1600}
+            height={900}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto"
+          />
+        </div>
+      )}
+
+<div className="mt-2 mb-10 text-sm space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
            {project.role && <div>Role ············· {project.role}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}
@@ -88,7 +101,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 return (
                   <div 
                     key={image.src + idx}
-                    className={`project-gallery-item w-full ${image.absolute ? 'relative' : ''}`}
+                    className={`project-gallery-item w-full ${image.absolute ? 'relative' : ''} ${image.alignment ? `align-${image.alignment}` : ''} ${image.mobileHidden ? 'hidden md:block' : ''}`}
                     style={{
                       gridArea: image.gridArea,
                       padding: image.padding || '30px'
@@ -117,9 +130,13 @@ export default async function ProjectPage({ params }: PageProps) {
                     ) : isFileVideo ? (
                       <video
                         className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
+                        style={image.width ? { width: image.width } : undefined}
                         src={image.src}
                         controls
                         playsInline
+                        autoPlay
+                        muted
+                        loop
                       />
                     ) : (
                       <Image
@@ -128,10 +145,14 @@ export default async function ProjectPage({ params }: PageProps) {
                         width={1600}
                         height={900}
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
+                        className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover m-auto`}
+                        style={image.width ? { width: image.width } : undefined}
                         priority={idx === 0}
                         loading={idx === 0 ? "eager" : undefined}
                       />
+                    )}
+                    {image.caption && (
+                      <p className="mt-4 text-sm font-inter-light">{image.caption}</p>
                     )}
                   </div>
                 );
@@ -165,6 +186,9 @@ export default async function ProjectPage({ params }: PageProps) {
                       src={src}
                       controls
                       playsInline
+                      autoPlay
+                      muted
+                      loop
                     />
                   ) : (
                     <Image

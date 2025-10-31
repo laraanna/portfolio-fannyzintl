@@ -67,6 +67,7 @@ body {
   .project-gallery-item {
     grid-area: var(--grid-area);
     width: 100%;
+    position: relative;
   }
   
   .project-gallery-item.relative {
@@ -75,9 +76,24 @@ body {
   
   .project-gallery-item.relative img {
     position: absolute;
-    top: 50%;
     left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .project-gallery-item.align-top img {
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  .project-gallery-item.align-center img,
+  .project-gallery-item.relative:not(.align-top):not(.align-bottom) img {
+    top: 50%;
     transform: translate(-50%, -50%);
+  }
+  
+  .project-gallery-item.align-bottom img {
+    bottom: 0;
+    transform: translateX(-50%);
   }
 }
 

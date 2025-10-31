@@ -56,14 +56,19 @@ export type Project = {
       src: string;
       gridArea: string; // e.g. "1 / 2 / 3 / 4" (row-start / col-start / row-end / col-end)
       absolute?: boolean; // centers image absolutely within grid area
+      alignment?: "top" | "center" | "bottom"; // vertical alignment when absolute
+      width?: string; // CSS width value (e.g. "200px", "50%", "auto")
       wFull?: boolean; // applies w-full class (default true)
       hFull?: boolean; // applies h-full class (default true)
       padding?: string; // CSS padding value (e.g. "10px", "1rem 2rem")
+      caption?: string; // optional caption text below image
+      mobileHidden?: boolean; // hide image on mobile screens
     }>;
   };
   // Extra fields as needed
   description?: string[];
   tags?: string[];
+  awards?: string; // optional awards image path
 };
 
 // ────────────────────────────────────────────────────────────────────────────────
@@ -192,20 +197,20 @@ export const projects: Project[] = [
       "https://vimeo.com/1128970837",
     ],
     layout: {
-      columns: ["1fr", "1fr"],
-      rows: ["auto"],
+      columns: ["1fr", "1fr", "1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
       gap: 0,
       images: [
-        { src: "https://vimeo.com/1128840100", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-2.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-3.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-4.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-5.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-6.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-7.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-8.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/bmw/bmw-9.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "https://vimeo.com/1128970837", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/1128840100", gridArea: "1 / 1 / auto / span 3", wFull: true, padding: "0px 0px 0px 50px" },
+        { src: "/projects/bmw/bmw-2.jpg", gridArea: "2 / 1 / auto / span 2", wFull: true, padding: "150px 0px 0px 50px" },
+        { src: "/projects/bmw/bmw-3.jpg", gridArea: "2 / 3 / auto / span 2", wFull: true, padding: "150px 0px 0px 50px" },
+        { src: "/projects/bmw/bmw-4.jpg", gridArea: "3 / 1 / auto / span 3", wFull: true, padding: "150px 0px 0px 250px" },
+        { src: "/projects/bmw/bmw-5.jpg", gridArea: "4 / 1 / auto / span 2", wFull: true, padding: "150px 100px 0px 50px" },
+        { src: "/projects/bmw/bmw-6.jpg", gridArea: "4 / 3 / span 2 / span 2", wFull: true, padding: "180px 0px 150px 50px" },
+        { src: "/projects/bmw/bmw-7.mp4", gridArea: "6 / 1 / auto / auto", wFull: true },
+        { src: "/projects/bmw/bmw-8.mp4", gridArea: "6 / 2 / auto / auto", wFull: true, mobileHidden: true },
+        { src: "/projects/bmw/bmw-9.mp4", gridArea: "6 / 3 / auto / auto", wFull: true, mobileHidden: true },
+        { src: "https://vimeo.com/1128970837", gridArea: "7 / 1 / auto / span 4", wFull: true, padding: "150px 0px 0px 250px" },
       ],
     },
   },
@@ -245,7 +250,7 @@ export const projects: Project[] = [
       gap: 0,
       images: [
         { src: "/projects/district-vision/district-vision-1.jpg", gridArea: "1 / 3 / auto / span 2", wFull: true },
-        { src: "/projects/district-vision/district-vision-2.jpg", gridArea: "1 / 1 / span 2 / span 2",absolute: true, wFull: true, hFull: false },
+        { src: "/projects/district-vision/district-vision-2.jpg", gridArea: "1 / 1 / span 2 / span 2",absolute: true, alignment: "center", wFull: true, hFull: false },
         { src: "/projects/district-vision/district-vision-3.jpg", gridArea: "2 / 3 / auto / span 2", wFull: true },
         { src: "/projects/district-vision/district-vision-4.jpg", gridArea: "3 / 1 / 3 / 1", wFull: true, hFull: false },
         { src: "/projects/district-vision/district-vision-5.jpg", gridArea: "3 / 2 / auto / span 2", wFull: true, hFull: false, padding: "60px 0px 5px 50px" },
@@ -282,20 +287,18 @@ export const projects: Project[] = [
       "As digital agency of record for Beyond Meat in the US and Europe, we expanded on the brand's core idea of Going Beyond. While the business had initially focused on B2B growth, in mid 2020 we defined a distinct B2C approach that could scale globally while resonating locally.",
       "I led the social first content strategy that built a coherent and impactful global presence, tailored to cultural nuances in key markets. This work brought plant based food from shelves to dinner plates in Germany, the UK and the Netherlands, establishing Beyond Meat not just as a product but as a thought leader in the plant-based movement."
     ],
-    cover: "/projects/beyond-meat/beyond-meat-2.jpg",
-
     layout: {
-      columns: ["1fr", "1fr", "1fr", "1fr"],
-      rows: ["1fr", "1fr", "1fr", "1fr", "auto", "1fr"],
+      columns: ["1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto"],
       gap: 0,
       images: [
-        { src: "/projects/beyond-meat/beyond-meat-1.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-2.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-3.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-4.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-5.mp4", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-6.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "/projects/beyond-meat/beyond-meat-7.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true },
+        { src: "/projects/beyond-meat/beyond-meat-1.jpg", gridArea: "1 / 2 / auto / auto", wFull: true, padding: "0px 250px 0px 30px" },
+        { src: "/projects/beyond-meat/beyond-meat-2.mp4", gridArea: "1 / 1 / span 2 / auto", wFull: true, padding: "100px 150px 100px 150px" },
+        { src: "/projects/beyond-meat/beyond-meat-3.jpg", gridArea: "2 / 2 / span 2 / auto", wFull: true, hFull: false, padding: "250px 30px 0px 30px" },
+        { src: "/projects/beyond-meat/beyond-meat-4.mp4", gridArea: "4 / 2 / auto / auto", wFull: true, padding: "0px 150px 150px 150px" },
+        { src: "/projects/beyond-meat/beyond-meat-5.mp4", gridArea: "4 / 1 / auto / auto", wFull: true, padding: "100px 0px 0px 0px" },
+        { src: "/projects/beyond-meat/beyond-meat-6.jpg", gridArea: "5 / 1 / auto / span 2", wFull: true, hFull: false, width: "50%", padding: "150px 0px 150px 0px" },
+        { src: "/projects/beyond-meat/beyond-meat-7.jpg", gridArea: "6 / 1 / auto / span 2", wFull: true, width: "70%" },
       ],
     },
   },
@@ -313,6 +316,28 @@ export const projects: Project[] = [
       "The Witcher: Map of the Continent brought together a world of information in a single space, and helped fans understand complex timelines and events, revealing connections they might have otherwise missed.",
       "By giving newcomers a tool to confidently navigate the mythology on their own terms, we turned confusion into curiosity and made the show's world accessible to a broader fanbase, winning multiple awards along the way."
     ],
+    awards: "/projects/netflix/netflix-awards.jpg",
+    gallery: [
+      "/projects/netflix/netflix-1.gif",
+      "/projects/netflix/netflix-2.jpg",
+      "/projects/netflix/netflix-3.gif",
+      "/projects/netflix/netflix-4.jpg",
+      "/projects/netflix/netflix-5.jpg",
+      "/projects/netflix/netflix-6.gif",
+    ],
+    layout: {
+      columns: ["1fr", "1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/netflix/netflix-1.gif", gridArea: "1 / 1 / auto / span 2", wFull: true, hFull: false, padding: "0px 50px 0px 0px" },
+        { src: "/projects/netflix/netflix-2.jpg", gridArea: "1 / 3 / span 2 / auto", wFull: true, hFull: false, padding: "0px 0px 0px 0px", absolute: true, alignment: "bottom" },
+        { src: "/projects/netflix/netflix-3.gif", gridArea: "2 / 1 / auto / span 2", wFull: true, hFull: false, padding: "250px 300px 50px 50px" },
+        { src: "/projects/netflix/netflix-5.jpg", gridArea: "3 / 3 / auto / auto", wFull: true, hFull: false, absolute: true, alignment: "center", width: "70%" },
+        { src: "/projects/netflix/netflix-4.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, hFull: false, padding: "200px 0px 200px 0px" },
+        { src: "/projects/netflix/netflix-6.gif", gridArea: "4 / 2 / auto / span 2", wFull: true, hFull: false, padding: "0px 0px 200px 0px" },
+      ],
+    },
   },
   {
     slug: "booking.com",
@@ -333,7 +358,17 @@ export const projects: Project[] = [
       "https://vimeo.com/656141775",
       "https://vimeo.com/656143017",
       "/projects/booking.com/booking.com-3.jpg",
-    ]
+    ],
+    layout: {
+      columns: ["2fr", "1fr", "3fr"],
+      rows: ["auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "https://vimeo.com/656141775", gridArea: "1 / 1 / auto / span 2", wFull: true,padding: "200px 0px 60px 0px" },
+        { src: "https://vimeo.com/656143017", gridArea: "2 / 2 / auto / span 2", wFull: true },
+        { src: "/projects/booking.com/booking.com-3.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, padding: "60px 0px 0px 0px" },
+      ],
+    },
   },
   {
     slug: "n26",
@@ -379,9 +414,20 @@ export const projects: Project[] = [
       "Naviya is an AI powered intelligence platform that turns company data and market signals into a daily feed of insights. It is the first BI tool built for everyone, giving each team the right information in clear, human language in under five minutes a day.",
       "I lead the product vision and insight architecture, defining how AI and strategy frameworks work together to deliver insights that are relevant, actionable and easy to understand. My focus is on transforming today’s data overload into clarity, creating a product that helps people stay informed without searching, scrolling through dashboards or sitting in meetings."
     ],
+    layout: {
+      columns: ["1fr", "1fr"],
+      rows: ["auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/naviya/naviya-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, padding: "0px 0px 50px 0px" },
+        { src: "/projects/naviya/naviya-2.jpg", gridArea: "2 / 1 / auto / span", wFull: true },
+        { src: "/projects/naviya/naviya-3.jpg", gridArea: "2 / 2 / auto / span", wFull: true },
+        { src: "/projects/naviya/naviya-4.jpg", gridArea: "3 / 1 / auto / span", wFull: true },
+        { src: "/projects/naviya/naviya-5.jpg", gridArea: "3 / 2 / auto / span", wFull: true },
+      ],
   },
  
- 
+}
 ];
 
 // ────────────────────────────────────────────────────────────────────────────────
