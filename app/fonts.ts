@@ -7,6 +7,7 @@ export const inter = Inter({
   display: "swap",
 });
 
+//import local font
 export const iowan = localFont({
   src: [
     {
