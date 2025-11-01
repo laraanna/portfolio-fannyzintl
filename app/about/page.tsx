@@ -25,7 +25,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="mx-auto w-[95%] px-9 py-6 space-y-12">
+    <main className="mx-auto w-[95%] px-9 pt-[120px] pb-6 space-y-12">
       <section id="section-about" className="pb-8 md:pb-14 md:mt-12">
         <div className="relative group flex gap-6">
           <div className="md:w-[70%] lg:w-[55%]">
