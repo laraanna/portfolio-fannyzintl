@@ -18,7 +18,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto w-[95%] px-9 md:px-16
-     pt-11 pb-6">
+     pt-[120px] pb-6">
      
       <div className="mb-10 md:max-w-[50%]">
         <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl font-iowan" style={{ wordBreak: 'break-word' }}>
