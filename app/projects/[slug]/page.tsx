@@ -22,15 +22,15 @@ export default async function ProjectPage({ params }: PageProps) {
      
       <div className="mb-10 md:max-w-[50%]">
         <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl font-iowan" style={{ wordBreak: 'break-word' }}>
-          <span className="hidden sm:inline">
+          {/* <span className="hidden sm:inline">
             {project.title.split(' - ').map((part, index) => (
               <span key={index} className={index > 0 ? "italic" : ""}>
                 {index > 0 && " - "}
                 {part}
               </span>
             ))}
-          </span>
-          <span className="sm:hidden">
+          </span> */}
+          <span className="">
             {project.title.split(' - ').map((part, index) => (
               <span 
                 key={index} 
