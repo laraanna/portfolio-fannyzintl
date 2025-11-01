@@ -69,8 +69,8 @@ export default function AboutPage() {
       </section>
       <section id="section-approach" className="pb-32 md:pb-40 md:max-w-[70%] lg:max-w-[55%] xl:max-w-[50%] md:ml-[30%] lg:ml-[45%] ">
         <SectionHeading>Approach</SectionHeading>
-        <p className="text-sm xl:text-lg mb-4">I believe that strategy only works if it’s designed to move. I start by analyzing data and understanding what actually drives value for the brand, the business, and the motivation behind people buying it. Then I turn that into frameworks teams can use: how to decide, what to make, where to grow.</p>
-        <p className="text-sm xl:text-lg mb-4">Whether it’s a brand foundation, a market entry plan, or a full operating model, the goal is the same: build strategies that scale because they work in practice, not just in theory.</p>
+        <p className="text-sm xl:text-lg mb-4">I believe that strategy only works if it&apos;s designed to move. I start by analyzing data and understanding what actually drives value for the brand, the business, and the motivation behind people buying it. Then I turn that into frameworks teams can use: how to decide, what to make, where to grow.</p>
+        <p className="text-sm xl:text-lg mb-4">Whether it&apos;s a brand foundation, a market entry plan, or a full operating model, the goal is the same: build strategies that scale because they work in practice, not just in theory.</p>
       </section>
       <section id="section-services" className="pb-32 md:max-w-[70%] xl:max-w-[60%]">
         <SectionHeading>Services</SectionHeading>

@@ -30,7 +30,7 @@ export default function Home() {
     <main className="mx-auto w-[95%] px-3 py-6 pt-[100px] md:pt-0 pb-[80px] md:pb-0 min-h-screen flex items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
         <div className="flex items-center justify-center">
-          <h1 className="text-4xl lg:text-6xl xl:text-8xl font-iowan">I build and <br /> grow brands.</h1>
+          <h1 className="text-4xl lg:text-6xl xl:text-8xl my-14 md:my-0 font-iowan">I build and <br /> grow brands.</h1>
         </div>
         <div className="px-6 md:px-0 md:pl-12">
            <h2 className="text-sm lg:text-xl xl:text-xl mb-1 font-iowan italic">Recent work:</h2>
