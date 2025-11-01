@@ -281,7 +281,7 @@ export const projects: Project[] = [
   {
     slug: "q36.5-pro-team",
     title: "Q36.5 Pro Cycling Team - Brand Strategy & Activation",
-    brand: "Q36.5",
+    brand: "Q36.5 Pro Team",
     status: "recent-work",
     category: "brand-strategy",
     role: "Head of Brand & Strategy",
