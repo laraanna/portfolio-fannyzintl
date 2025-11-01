@@ -461,7 +461,7 @@ export const projects: Project[] = [
       rows: ["auto", "auto", "auto"],
       gap: 0,
       images: [
-        { src: "/projects/naviya/naviya-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, padding: "0px 0px 50px 0px" },
+        { src: "/projects/naviya/naviya-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, padding: "0px 0px 100px 0px", width: "50%" },
         { src: "/projects/naviya/naviya-2.jpg", gridArea: "2 / 1 / auto / span", wFull: true },
         { src: "/projects/naviya/naviya-3.jpg", gridArea: "2 / 2 / auto / span", wFull: true },
         { src: "/projects/naviya/naviya-4.jpg", gridArea: "3 / 1 / auto / span", wFull: true },
