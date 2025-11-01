@@ -6,9 +6,10 @@ import { usePathname } from "next/navigation";
 export default function SiteHeader() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isProjectPage = pathname?.startsWith("/projects/") ?? false;
 
   return (
-    <header className={isHomePage ? "fixed top-0 left-0 right-0 bg-white z-50" : ""}>
+    <header className={isHomePage || isProjectPage ? "fixed top-0 left-0 right-0 bg-white z-50" : ""}>
       <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
         <Link
           href="/"
