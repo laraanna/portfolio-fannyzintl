@@ -30,6 +30,12 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* Utility class for Inter Medium font family */
+.font-inter-medium {
+  font-family: var(--font-inter-medium), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
 /* Utility class for Iowan Old Style font family */
 .font-iowan {
   font-family: var(--font-iowan), serif;

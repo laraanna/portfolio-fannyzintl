@@ -229,6 +229,23 @@ export const projects: Project[] = [
       "At its core is a continuous test-and-learn framework: from creative hooks and formats to media investment, every decision is measured, refined and scaled. By finding the sweet spot between brand positioning and visual language, the system ensures each campaign stays true to Q36.5's identity while driving measurable performance.",
       "<i>Results: </i><br />Revenue grew +187% YOY after deployment in 2022<br />Tripled total revenue in 2 years with half the marketing budget<br />Built an autonomous growth framework that sustains continuous scaling<br />Established an automated creative testing system to identify winning formulas"
     ],
+    // gallery: [
+    //   "https://vimeo.com/1129343474",
+    //   "/projects/q36.5-growth/q36.5-growth-2.jpg",
+    //   "https://vimeo.com/1129335514",
+    //   "/projects/q36.5-growth/q36.5-growth-5.jpg",
+    //   "/projects/q36.5-growth/q36.5-growth-6.mp4",
+    //   "/projects/q36.5-growth/q36.6-growth-7.jpg",
+    //   "https://vimeo.com/1126780253",
+    //   "/projects/q36.5-growth/q36.6-growth-9.jpg",
+    //   "/projects/q36.5-growth/q36.6-growth-10.mp4",
+    //   "/projects/q36.5-growth/q36.6-growth-11.jpg",
+    //   "/projects/q36.5-growth/q36.6-growth-12.jpg",
+    //   "/projects/q36.5-growth/q36.6-growth-13.jpg",
+    //   "/projects/q36.5-growth/q36.6-growth-14.mp4",
+    //   "https://vimeo.com/1126778301"
+
+    // ],
   },
   {
     slug: "district-vision",

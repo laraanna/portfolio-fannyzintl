@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
-import { inter, iowan } from "./fonts";
+import { inter, interMedium, iowan } from "./fonts";
 
 
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${iowan.variable} antialiased`}
+        className={`${inter.variable} ${interMedium.variable} ${iowan.variable} antialiased`}
       >
         <SiteHeader />
         {children}

@@ -7,6 +7,13 @@ export const inter = Inter({
   display: "swap",
 });
 
+export const interMedium = Inter({
+  weight: "500",
+  variable: "--font-inter-medium",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 //import local font
 export const iowan = localFont({
   src: [
