@@ -74,17 +74,17 @@ export default function AboutPage() {
       </section>
       <section id="section-services" className="pb-32 md:max-w-[70%] xl:max-w-[60%]">
         <SectionHeading>Services</SectionHeading>
-       <div className="flex gap-[35px]">
+       <div className="flex gap-[25px]">
         <div className="flex-1">
           {services.slice(0, 6).map((item, index) => (
-            <div key={item} className={`py-4 text-xs md:text-sm xl:text-lg border-b border-neutral-300 lg:max-w-[200px] xl:max-w-[300px] ${index === 0 ? 'border-t' : ''}`}>
+            <div key={item} className={`py-3 text-[0.68rem] md:text-sm xl:text-lg border-b border-neutral-300 lg:max-w-[200px] xl:max-w-[300px] ${index === 0 ? 'border-t' : ''}`}>
               {item}
             </div>
           ))}
         </div>
         <div className="flex-1">
           {services.slice(6, 12).map((item, index) => (
-            <div key={item} className={`py-4 text-xs md:text-sm xl:text-lg border-b border-neutral-300 lg:max-w-[220px] xl:max-w-[300px] ${index === 0 ? 'border-t' : ''}`}>
+            <div key={item} className={`py-3 text-[0.68rem] md:text-sm xl:text-lg border-b border-neutral-300 lg:max-w-[220px] xl:max-w-[300px] ${index === 0 ? 'border-t' : ''}`}>
               {item}
             </div>
           ))}
