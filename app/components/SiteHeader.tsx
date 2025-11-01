@@ -18,7 +18,7 @@ export default function SiteHeader() {
         >
           Fanny Zintl
         </Link>
-        <nav className="text-xs font-medium md:text-sm lg:text-base">
+        <nav className="text-xs font-medium md:text-sm">
           <div className="bg-[#F3F3F3] rounded-full px-4 py-2 flex items-center gap-3">
             <Link href="/about" className="hover:underline px-0.5 py-1 rounded-full">About</Link>
             <Link href="/about#section-services" className="hover:underline px-0.5 py-1 rounded-full">Services</Link>
