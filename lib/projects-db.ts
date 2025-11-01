@@ -402,12 +402,12 @@ export const projects: Project[] = [
       "/projects/booking.com/booking.com-3.jpg",
     ],
     layout: {
-      columns: ["2fr", "1fr", "3fr"],
+      columns: ["2fr", "1fr", "2fr"],
       rows: ["auto", "auto", "auto"],
       gap: 0,
       images: [
         { src: "https://vimeo.com/656141775", gridArea: "1 / 1 / auto / span 2", wFull: true,padding: "200px 0px 60px 0px" },
-        { src: "https://vimeo.com/656143017", gridArea: "2 / 2 / auto / span 2", wFull: true },
+        { src: "https://vimeo.com/656143017", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "30px 0px 30px 0px" },
         { src: "/projects/booking.com/booking.com-3.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, padding: "60px 0px 0px 0px" },
       ],
     },
