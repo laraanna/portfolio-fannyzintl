@@ -47,7 +47,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
 
       {project.description && project.description.length > 0 && (
-        <div className="text-sm/4.5 md:text-base max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
+        <div className="text-sm/4.5 md:text-base/5.5 max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
           {project.description.map((paragraph, idx) => (
             <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} className="mb-6" />
           ))}

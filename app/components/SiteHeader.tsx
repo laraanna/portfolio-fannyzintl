@@ -14,11 +14,11 @@ export default function SiteHeader() {
       <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
         <Link
           href="/"
-          className="text-2xl md:text-3xl lg:text-5xl italic font-iowan"
+          className="text-2xl md:text-3xl lg:text-4xl italic font-iowan"
         >
           Fanny Zintl
         </Link>
-        <nav className="text-xs md:text-sm lg:text-lg">
+        <nav className="text-xs md:text-sm lg:text-base">
           <div className="bg-[#F3F3F3] rounded-full px-3 py-1 flex items-center gap-3">
             <Link href="/about" className="hover:underline px-1 py-0.5 rounded-full">About</Link>
             <Link href="/about#section-services" className="hover:underline px-1 py-0.5 rounded-full">Services</Link>
