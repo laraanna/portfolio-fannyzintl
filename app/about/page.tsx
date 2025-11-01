@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-4xl md:text-5xl xl:text-6xl font-iowan mb-4 lg:mb-6">
+    <h2 className="text-4xl md:text-5xl xl:text-6xl font-iowan mb-4 lg:mb-10">
       {children}
     </h2>
   );
@@ -94,7 +94,7 @@ export default function AboutPage() {
       <section id="section-contact" className="md:max-w-[70%] lg:max-w-[40%] md:ml-[15%] lg:ml-[30%]">
         <SectionHeading>Contact</SectionHeading>
         <p className="text-sm/4.5 xl:text-lg mb-4">I work with brands and teams on projects of all sizes. If you’re looking for a strategic partner or are building something, send me a message. </p>
-        <p className="text-sm/4.5 xl:text-lg">info.fannyzintl@gmail.com / <a href="https://www.linkedin.com/in/fannyzintl/" className="border-b border-black" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <p className="text-sm/4.5 xl:text-lg">info.fannyzintl@gmail.com / <a href="https://www.linkedin.com/in/fanny-zintl-ab183ba7/" target="_blank" className="border-b border-black" rel="noopener noreferrer">LinkedIn</a></p>
       </section>
     </main>
   );
