@@ -55,13 +55,13 @@ export default async function ProjectPage({ params }: PageProps) {
       )}
 
       {project.awards && (
-        <div className="mb-10 md:max-w-[50%] lg:max-w-[40%]">
+        <div className="mb-10 max-w-[250px] md:max-w-[25%]">
           <Image
             src={project.awards}
             alt={`${project.title} — Awards`}
             width={1600}
             height={900}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 400px) 100vw, 50vw"
             className="w-full h-auto"
           />
         </div>

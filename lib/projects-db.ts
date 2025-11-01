@@ -227,7 +227,7 @@ export const projects: Project[] = [
     description: [
       "To fuel Q36.5's global growth, I designed a streamlined and data-driven operating system that connects insights across every consumer touchpoint. The Scale-Up Model evaluates and optimizes marketing efforts in real time, turning data into actions that directly impact growth.",
       "At its core is a continuous test-and-learn framework: from creative hooks and formats to media investment, every decision is measured, refined and scaled. By finding the sweet spot between brand positioning and visual language, the system ensures each campaign stays true to Q36.5's identity while driving measurable performance.",
-      "Results: <br />Revenue grew +187% YOY after deployment in 2022<br />Tripled total revenue in 2 years with half the marketing budget<br />Built an autonomous growth framework that sustains continuous scaling<br />Established an automated creative testing system to identify winning formulas"
+      "<i>Results: </i><br />Revenue grew +187% YOY after deployment in 2022<br />Tripled total revenue in 2 years with half the marketing budget<br />Built an autonomous growth framework that sustains continuous scaling<br />Established an automated creative testing system to identify winning formulas"
     ],
   },
   {
@@ -240,9 +240,9 @@ export const projects: Project[] = [
     hiredBy: "Max Vallot",
     client: "District Vision",
     description: [
-      "During my time at District Vision I helped develop Meditation in Motion, a long-term strategic brand foundation that reframed athleticism through a holistic lens, putting mindfulness at the foundation of physical performance.",
-      "Meditation in Motion argues that true high performance isn't just a physical ideal, it begins in the mind. That mental clarity and balance are the foundation on which every stride, every pace, every pedal stroke is built.",
-      "By embedding Meditation in Motion deeply into brand strategy, we ensured it wasn't a tagline or campaign. It became the lens through which all creative decisions passed.",
+      "During my time at District Vision I helped develop <i>Meditation in Motion</i>, a long-term strategic brand foundation that reframed athleticism through a holistic lens, putting mindfulness at the foundation of physical performance.",
+      "<i>Meditation in Motion</i> argues that true high performance isn't just a physical ideal, it begins in the mind. That mental clarity and balance are the foundation on which every stride, every pace, every pedal stroke is built.",
+      "By embedding <i>Meditation in Motion</i> deeply into brand strategy, we ensured it wasn't a tagline or campaign. It became the lens through which all creative decisions passed.",
       "It remains the brand's guiding ethos today, shaping every campaign and product story. The recent creative work here is a direct continuation of that foundation, proof of a strategy built to endure and evolve."
     ],
     layout: {
@@ -271,7 +271,7 @@ export const projects: Project[] = [
     season: "2023 & 2024",
     client: "Q36.5 Pro Cycling Team",
     description: [
-      "In 2023, I led the full brand and strategy for Q36.5's entry into pro cycling under the umbrella of #RacingTheFuture. Over two seasons I shaped every aspect: from kit design to identity to year-round communication, hero campaigns, and integrating the team as a living embodiment of the brand vision. ",
+      "In 2023, I led the full brand and strategy for Q36.5's entry into pro cycling under the umbrella of <i>#RacingTheFuture</i>. Over two seasons I shaped every aspect: from kit design to identity to year-round communication, hero campaigns, and integrating the team as a living embodiment of the brand vision. ",
       "Under my direction, brand and performance merged. We aligned Q36.5's technical DNA with a compelling narrative that the team isn't just sponsored, it is the brand in action."
     ],
     layout: {
@@ -337,8 +337,8 @@ export const projects: Project[] = [
     hiredBy: ".Monks",
     client: "Netflix",
     description: [
-      "Netflix wanted to expand its breakout series The Witcher beyond hardcore fantasy fans to reach casual viewers. Leading strategy, I identified that the show's non-linear timeline was was losing this audience rather than hooking them. So instead of simplifying the content, I positioned an interactive map as a post-viewing tool that let viewers reconstruct the story chronologically and explore the mythology on their own terms.",
-      "The Witcher: Map of the Continent brought together a world of information in a single space, and helped fans understand complex timelines and events, revealing connections they might have otherwise missed.",
+      "Netflix wanted to expand its breakout series <i>The Witcher</i> beyond hardcore fantasy fans to reach casual viewers. Leading strategy, I identified that the show's non-linear timeline was was losing this audience rather than hooking them. So instead of simplifying the content, I positioned an interactive map as a post-viewing tool that let viewers reconstruct the story chronologically and explore the mythology on their own terms.",
+      "<i>The Witcher: Map of the Continent</i> brought together a world of information in a single space, and helped fans understand complex timelines and events, revealing connections they might have otherwise missed.",
       "By giving newcomers a tool to confidently navigate the mythology on their own terms, we turned confusion into curiosity and made the show's world accessible to a broader fanbase, winning multiple awards along the way."
     ],
     awards: "/projects/netflix/netflix-awards.jpg",
@@ -374,7 +374,7 @@ export const projects: Project[] = [
     hiredBy: ".Monks",
     client: "Booking.com",
     description: [
-      "Booking.com asked us to create their first global employer brand campaign, built around the idea of 'Expand Horizons'.",
+      "Booking.com asked us to create their first global employer brand campaign, built around the idea of <i>'Expand Horizons'</i>.",
       "As strategic lead, I shaped the campaign framework, building a modular system that could flex across audiences while staying anchored in one story. Working with employees across three continents, we surfaced insider humor and cultural nuances that revealed Booking's trademark diversity and sense of community: from a programmer’s debugging rubber duck to customer service anecdotes, every detail made the brand feel human, relatable, and globally connected.",
       "The result was a campaign that turned employee experience into the strongest proof point of the employer brand, inspiring recruits by showing that working at Booking.com is itself a horizon-expanding experience."
     ],
@@ -436,7 +436,7 @@ export const projects: Project[] = [
     togetherWith: "Marc Vermeeren",
     stage: "Pre Seed",
     description: [
-      "Naviya is an AI powered intelligence platform that turns company data and market signals into a daily feed of insights. It is the first BI tool built for everyone, giving each team the right information in clear, human language in under five minutes a day.",
+      "<i>Naviya</i> is an AI powered intelligence platform that turns company data and market signals into a daily feed of insights. It is the first BI tool built for everyone, giving each team the right information in clear, human language in under five minutes a day.",
       "I lead the product vision and insight architecture, defining how AI and strategy frameworks work together to deliver insights that are relevant, actionable and easy to understand. My focus is on transforming today’s data overload into clarity, creating a product that helps people stay informed without searching, scrolling through dashboards or sitting in meetings."
     ],
     layout: {
