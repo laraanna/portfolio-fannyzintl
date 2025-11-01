@@ -271,7 +271,7 @@ export const projects: Project[] = [
         { src: "/projects/district-vision/district-vision-2.jpg", gridArea: "1 / 1 / span 2 / span 2",absolute: true, alignment: "center", wFull: true, hFull: false },
         { src: "/projects/district-vision/district-vision-3.jpg", gridArea: "2 / 3 / auto / span 2", wFull: true },
         { src: "/projects/district-vision/district-vision-4.jpg", gridArea: "3 / 1 / 3 / 1", wFull: true, hFull: false },
-        { src: "/projects/district-vision/district-vision-5.jpg", gridArea: "3 / 2 / auto / span 2", wFull: true, hFull: false, padding: "60px 0px 5px 50px" },
+        { src: "/projects/district-vision/district-vision-5.jpg", gridArea: "3 / 2 / auto / span 2", wFull: true, hFull: false, padding: "60px 0px 80px 50px" },
         { src: "/projects/district-vision/district-vision-6.jpg", gridArea: "4 / 1 / auto / span 2" },
         { src: "/projects/district-vision/district-vision-7.png", gridArea: "5 / 2 / auto / span 3", wFull: true, hFull: false, padding: "80px 200px 80px 30px" },
         { src: "/projects/district-vision/district-vision-8.jpg", gridArea: "6 / 2 / auto / span 2" },
