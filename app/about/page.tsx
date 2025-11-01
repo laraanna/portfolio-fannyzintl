@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section id="section-quote" className="pb-8 lg:pb-34">
         <blockquote className="font-iowan italic text-center text-base lg:text-2_5xl lg:pr-120">--I design strategy and systems for growth--</blockquote>
       </section>
-      <section id="section-approach" className="pb-32 md:pb-40 md:max-w-[70%] lg:max-w-[55%] xl:max-w-[40%] md:ml-[30%] lg:ml-[60%] ">
+      <section id="section-approach" className="pb-32 md:pb-40 md:max-w-[70%] lg:max-w-[55%] xl:max-w-[40%] md:ml-[30%] lg:ml-[45%] ">
         <SectionHeading>Approach</SectionHeading>
         <p className="text-sm/4.5 xl:text-lg/6 mb-4">I believe that strategy only works if it&apos;s designed to move. I start by analyzing data and understanding what actually drives value for the brand, the business, and the motivation behind people buying it. Then I turn that into frameworks teams can use: how to decide, what to make, where to grow.</p>
         <p className="text-sm/4.5 xl:text-lg/6 mb-4">Whether it&apos;s a brand foundation, a market entry plan, or a full operating model, the goal is the same: build strategies that scale because they work in practice, not just in theory.</p>
