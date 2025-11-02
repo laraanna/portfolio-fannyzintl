@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/lib/projects-db";
+import FadeInScroll from "@/app/components/FadeInScroll";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -107,7 +108,8 @@ export default async function ProjectPage({ params }: PageProps) {
                       padding: image.padding || '30px'
                     } as React.CSSProperties & { '--mobile-padding': string }}
                   >
-                    {isVimeo ? (
+                    <FadeInScroll delay={idx * 100}>
+                      {isVimeo ? (
                       <div className="w-full h-full" style={{ position: "relative", paddingBottom: image.aspectRatio === "9:16" ? "177.78%" : "56.25%", height: 0 }}>
                         <iframe
                           src={image.src.includes("player.vimeo.com") ? image.src : image.src.replace("vimeo.com/", "player.vimeo.com/video/")}
@@ -151,9 +153,10 @@ export default async function ProjectPage({ params }: PageProps) {
                         loading={idx === 0 ? "eager" : undefined}
                       />
                     )}
-                    {image.caption && (
-                      <p className="mt-4 text-sm font-inter-light">{image.caption}</p>
-                    )}
+                      {image.caption && (
+                        <p className="mt-4 text-sm font-inter-light">{image.caption}</p>
+                      )}
+                    </FadeInScroll>
                   </div>
                 );
               })}
@@ -170,38 +173,40 @@ export default async function ProjectPage({ params }: PageProps) {
 
               return (
                 <div key={src + idx}>
-                  {isVimeo ? (
-                    <div className="w-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
-                      <iframe
-                        src={src.includes("player.vimeo.com") ? src : src.replace("vimeo.com/", "player.vimeo.com/video/")}
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        title={`${project.title} — Video ${idx + 1}`}
-                        style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+                  <FadeInScroll delay={idx * 100}>
+                    {isVimeo ? (
+                      <div className="w-full" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                        <iframe
+                          src={src.includes("player.vimeo.com") ? src : src.replace("vimeo.com/", "player.vimeo.com/video/")}
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`${project.title} — Video ${idx + 1}`}
+                          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+                        />
+                      </div>
+                    ) : isFileVideo ? (
+                      <video
+                        className="w-full h-auto"
+                        src={src}
+                        controls
+                        playsInline
+                        autoPlay
+                        muted
+                        loop
                       />
-                    </div>
-                  ) : isFileVideo ? (
-                    <video
-                      className="w-full h-auto"
-                      src={src}
-                      controls
-                      playsInline
-                      autoPlay
-                      muted
-                      loop
-                    />
-                  ) : (
-                    <Image
-                      src={src}
-                      alt={`${project.title} — Image ${idx + 1}`}
-                      width={1600}
-                      height={900}
-                      sizes="100vw"
-                      className="w-full h-auto"
-                      priority={idx === 0}
-                      loading={idx === 0 ? "eager" : undefined}
-                    />
-                  )}
+                    ) : (
+                      <Image
+                        src={src}
+                        alt={`${project.title} — Image ${idx + 1}`}
+                        width={1600}
+                        height={900}
+                        sizes="100vw"
+                        className="w-full h-auto"
+                        priority={idx === 0}
+                        loading={idx === 0 ? "eager" : undefined}
+                      />
+                    )}
+                  </FadeInScroll>
                 </div>
               );
             })

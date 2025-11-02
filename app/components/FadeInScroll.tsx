@@ -1,0 +1,46 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+interface FadeInScrollProps {
+  children: React.ReactNode;
+  delay?: number;
+}
+
+export default function FadeInScroll({ children, delay = 0 }: FadeInScrollProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setIsVisible(true);
+          }, delay);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        transition: "opacity 700ms ease-in-out",
+        opacity: isVisible ? 1 : 0,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
