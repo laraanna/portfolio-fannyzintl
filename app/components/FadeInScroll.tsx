@@ -18,7 +18,8 @@ export default function FadeInScroll({ children, delay = 0 }: FadeInScrollProps)
           setTimeout(() => {
             setIsVisible(true);
           }, delay);
-          observer.disconnect();
+        } else {
+          setIsVisible(false);
         }
       },
       { threshold: 0.1 }
@@ -32,13 +33,7 @@ export default function FadeInScroll({ children, delay = 0 }: FadeInScrollProps)
   }, [delay]);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        transition: "opacity 700ms ease-in-out",
-        opacity: isVisible ? 1 : 0,
-      }}
-    >
+    <div ref={ref} className={`fade-in-animate ${isVisible ? "visible" : ""}`}>
       {children}
     </div>
   );

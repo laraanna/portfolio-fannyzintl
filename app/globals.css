@@ -124,3 +124,46 @@ body {
   font-size: 4.5rem; /* 72px */
   line-height: 5rem; /* 80px */
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(30px);
+  }
+  33.333% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) skew(0deg) translateX(0px) translateY(0px) translateZ(0px);
+    filter: initial;
+  }
+  49.833% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) skew(0deg) translateX(0px) translateY(0px) translateZ(0px);
+    filter: initial;
+    transform-origin: 50% 50%;
+  }
+  50.167% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) skew(0deg) translateX(0px) translateY(0px) translateZ(0px);
+    filter: initial;
+    transform-origin: 50% 50%;
+  }
+  66.667% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) skew(0deg) translateX(0px) translateY(0px) translateZ(0px);
+    filter: initial;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) skew(0deg) translateX(0px) translateY(0px) translateZ(0px);
+    filter: initial;
+  }
+}
+
+.fade-in-animate {
+  animation: fadeIn 2000ms ease-in-out forwards paused;
+}
+
+.fade-in-animate.visible {
+  animation-play-state: running;
+}
+

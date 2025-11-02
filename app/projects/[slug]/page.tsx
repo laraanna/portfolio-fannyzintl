@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 return (
                   <div 
                     key={image.src + idx}
-                    className={`project-gallery-item w-full ${image.absolute ? 'relative' : ''} ${image.alignment ? `align-${image.alignment}` : ''} ${image.mobileHidden ? 'hidden md:block' : ''}`}
+                    className={`project-gallery-item w-full ${image.mobileHidden ? 'hidden md:block' : ''}`}
                     style={{
                       gridArea: image.gridArea,
                       padding: image.padding || '30px'
@@ -149,8 +149,8 @@ export default async function ProjectPage({ params }: PageProps) {
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover m-auto`}
                         style={image.width ? { width: image.width } : undefined}
-                        priority={idx === 0}
-                        loading={idx === 0 ? "eager" : undefined}
+                        priority={idx < 3}
+                        loading={idx < 3 ? "eager" : "lazy"}
                       />
                     )}
                       {image.caption && (
@@ -202,8 +202,8 @@ export default async function ProjectPage({ params }: PageProps) {
                         height={900}
                         sizes="100vw"
                         className="w-full h-auto"
-                        priority={idx === 0}
-                        loading={idx === 0 ? "eager" : undefined}
+                        priority={idx < 3}
+                        loading={idx < 3 ? "eager" : "lazy"}
                       />
                     )}
                   </FadeInScroll>

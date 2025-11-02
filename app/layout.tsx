@@ -9,7 +9,7 @@ import { inter, interMedium, iowan } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Fanny Zintl",
-  description: "Portfolio of Fanny Zintl - I build and grow brands",
+  description: "Portfolio of Fanny Zintl - Growth Strategy Director",
 };
 
 export default function RootLayout({
