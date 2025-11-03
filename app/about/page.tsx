@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-4xl md:text-5xl xl:text-6xl font-iowan mb-4 lg:mb-10">
+    <h2 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-iowan mb-4 lg:mb-10">
       {children}
     </h2>
   );
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
   return (
     <main className="mx-auto w-[95%] 2xl:w-[70%] px-9 pt-[120px] pb-6 space-y-12">
-      <section id="section-about" className="pb-8 md:pb-20 md:mt-12 2xl:mt-16">
+      <section id="section-about" className="pb-8 md:pb-20 md:mt-12 2xl:mt-16 2xl:mb-30">
         <div className="relative group flex gap-6">
           <div className="md:w-[70%] lg:w-[40%]">
             <div className="flex items-end">
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <p className="text-sm/4.5 xl:text-lg/6 2xl:text-1_5xl mb-4">I collaborate with companies in different ways: sometimes leading projects, sometimes plugging into existing teams, and sometimes acting as an external strategic partner.</p>
             <p className="text-sm/4.5 xl:text-lg/6 2xl:text-1_5xl mb-4">I&apos;m especially drawn to projects where brand and growth aren&apos;t separate conversations, whether that&apos;s helping an early venture find its footing or an established company looking for new momentum.</p>
           </div>
-          <div className="hidden md:flex md:w-[25%] items-center justify-end">
+          <div className="hidden md:flex md:w-[25%] 2xl:w-[40%] items-center justify-end">
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-out">
               <Image
                 src="/about/about-fannyzintl.jpg"
@@ -57,14 +57,14 @@ export default function AboutPage() {
                 width={680}
                 height={900}
                 sizes="25vw"
-                className="w-auto h-auto max-h-[400px]"
+                className="w-auto h-auto max-h-[400px] 2xl:max-h-[1000px]"
                 priority={false}
               />
             </div>
           </div>
         </div>
       </section>
-      <section id="section-quote" className="pb-8 lg:pb-34">
+      <section id="section-quote" className="pb-8 lg:pb-34 2xl:pb-50">
         <blockquote className="font-iowan italic text-center text-base lg:text-2_5xl lg:pr-120">--I design strategy and systems for growth--</blockquote>
       </section>
       <section id="section-approach" className="pb-32 md:pb-40 md:max-w-[70%] lg:max-w-[55%] xl:max-w-[40%] md:ml-[30%] lg:ml-[45%] ">
