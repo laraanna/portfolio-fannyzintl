@@ -121,6 +121,11 @@ body {
   line-height: 3.5rem; /* 56px */
 }
 
+@utility text-5_5xl {
+  font-size: 3rem; /* 54px */
+  line-height: 3.8rem; /* 62px */
+}
+
 @utility text-7_5xl {
   font-size: 4.5rem; /* 72px */
   line-height: 5rem; /* 80px */

@@ -14,7 +14,7 @@ function ProjectLink({ project }: { project: Project }) {
       className="group block"
     >
       <div className="mt-2 text-sm">
-        <span className="text-2xl lg:text-2_5xl 2xl:text-5xl font-iowan">{project.brand}</span>
+        <span className="text-2xl lg:text-2_5xl 2xl:text-5_5xl font-iowan">{project.brand}</span>
         <span className="text-sm 2xl:text-lg font-inter"> {formattedCategory}</span>
       </div>
     </Link>
