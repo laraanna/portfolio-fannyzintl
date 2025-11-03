@@ -134,7 +134,6 @@ export default async function ProjectPage({ params }: PageProps) {
                         className={`${image.wFull !== false && !image.width ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
                         style={image.width ? { width: image.width } : undefined}
                         src={image.src}
-                        controls
                         playsInline
                         autoPlay
                         muted
@@ -188,7 +187,6 @@ export default async function ProjectPage({ params }: PageProps) {
                       <video
                         className="w-full h-auto"
                         src={src}
-                        controls
                         playsInline
                         autoPlay
                         muted
