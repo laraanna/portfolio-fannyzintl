@@ -57,7 +57,7 @@ export default function AboutPage() {
                 width={680}
                 height={900}
                 sizes="25vw"
-                className="w-auto h-auto max-h-[400px] 2xl:max-h-[1000px]"
+                className="w-auto h-auto max-h-[400px] 2xl:max-h-[750px]"
                 priority={false}
               />
             </div>
