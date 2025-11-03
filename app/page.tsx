@@ -14,8 +14,8 @@ function ProjectLink({ project }: { project: Project }) {
       className="group block"
     >
       <div className="mt-2 text-sm">
-        <span className="text-2xl lg:text-2_5xl 2xl:text-3xl font-iowan">{project.brand}</span>
-        <span className="text-sm font-inter"> {formattedCategory}</span>
+        <span className="text-2xl lg:text-2_5xl 2xl:text-5xl font-iowan">{project.brand}</span>
+        <span className="text-sm 2xl:text-lg font-inter"> {formattedCategory}</span>
       </div>
     </Link>
   );
@@ -30,10 +30,10 @@ export default function Home() {
     <main className="mx-auto w-[95%] px-3 py-6 pt-[100px] md:pt-0 pb-[80px] md:pb-0 min-h-screen flex items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
         <div className="flex items-center justify-center">
-          <h1 className="text-4_5xl lg:text-6xl xl:text-7_5xl my-14 md:my-0 font-iowan">I build and <br /> grow brands.</h1>
+          <h1 className="text-4_5xl lg:text-6xl xl:text-7_5xl 2xl:text-8xl my-14 md:my-0 font-iowan">I build and <br /> grow brands.</h1>
         </div>
         <div className="px-6 md:px-0 md:pl-12">
-           <h2 className="text-sm  mb-1 font-iowan italic">Recent work:</h2>
+           <h2 className="text-sm  2xl:text-xl mb-1 font-iowan italic">Recent work:</h2>
 
           <div className="grid grid-cols-1 gap-0 mb-12">
             {recentWork.map((p) => (
@@ -43,7 +43,7 @@ export default function Home() {
 
           {inProgress.length > 0 && (
             <>
-               <h2 className="text-sm  mb-1 font-iowan italic">In progress:</h2>
+               <h2 className="text-sm  2xl:text-xl mb-1 font-iowan italic">In progress:</h2>
               <div className="grid grid-cols-1 gap-0 md:gap-3">
                 {inProgress.map((p) => (
                   <ProjectLink key={p.slug} project={p} />

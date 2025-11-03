@@ -14,7 +14,7 @@ export default function SiteHeader() {
       <div className="mx-auto w-[95%] px-3 py-6 flex items-center justify-between">
         <Link
           href="/"
-          className="text-2_5xl md:text-3xl lg:text-5xl italic font-iowan"
+          className="text-2_5xl md:text-3xl lg:text-5xl 2xl:text-6xl italic font-iowan"
         >
           Fanny Zintl
         </Link>

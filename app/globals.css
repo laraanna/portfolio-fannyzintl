@@ -9,6 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
+  --breakpoint-2xl: 100rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -123,6 +124,11 @@ body {
 @utility text-7_5xl {
   font-size: 4.5rem; /* 72px */
   line-height: 5rem; /* 80px */
+}
+
+@utility text-8_5xl {
+  font-size: 7rem; /* 112px */
+  line-height: 7rem; /* 112px */
 }
 
 @keyframes fadeIn {
