@@ -54,15 +54,14 @@ body {
   display: grid;
   grid-template-columns: 1fr !important;
   grid-template-rows: repeat(var(--grid-rows), auto) !important;
-  /* grid-auto-rows: auto !important; */
-  /* grid-auto-rows: auto !important; */
 }
 .project-gallery-item {
   grid-area: unset !important;
   margin-bottom: 30px;
 }
 
-.project-gallery-item > img {
+.project-gallery-item > div > img,
+.project-gallery-item > div > video {
   width: 100% !important;
   height: auto !important;
 }
@@ -103,6 +102,11 @@ body {
   .project-gallery-item.align-bottom img {
     bottom: 0;
     transform: translateX(-50%);
+  }
+  
+  .project-gallery-item > img[style*="width"],
+  .project-gallery-item > video[style*="width"] {
+    width: unset !important;
   }
 }
 

@@ -131,7 +131,7 @@ export default async function ProjectPage({ params }: PageProps) {
                       </div>
                     ) : isFileVideo ? (
                       <video
-                        className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
+                        className={`${image.wFull !== false && !image.width ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover`}
                         style={image.width ? { width: image.width } : undefined}
                         src={image.src}
                         controls
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         width={1600}
                         height={900}
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className={`${image.wFull !== false ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover m-auto`}
+                        className={`${image.wFull !== false && !image.width ? 'w-full' : ''} ${image.hFull !== false ? 'h-full' : ''} object-cover m-auto`}
                         style={image.width ? { width: image.width } : undefined}
                         priority={idx < 3}
                         loading={idx < 3 ? "eager" : "lazy"}

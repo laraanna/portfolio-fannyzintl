@@ -151,7 +151,7 @@ export const projects: Project[] = [
         { src: "/projects/q36.5-brand/q36.5-brand-17.jpg", gridArea: "11 / 3 / span 2 / auto", wFull: true, width: "80%", padding: "9.375rem 0 0 0" },
         { src: "/projects/q36.5-brand/q36.5-brand-18.jpg", gridArea: "10 / 3 / auto / auto", wFull: true, mobileHidden: true, width: "60%" },
         { src: "/projects/q36.5-brand/q36.5-brand-19.jpg", gridArea: "12 / 1 / span 2 / auto", wFull: true, hFull: false, mobileHidden: true, padding: "9.375rem 0 0 3.125rem" },
-        { src: "/projects/q36.5-brand/q36.5-brand-20.jpg", gridArea: "13 / 2 / auto / span 2", wFull: true, mobileHidden: true, width: "60%", padding: "11rem 0 0 0" },
+        { src: "/projects/q36.5-brand/q36.5-brand-20.jpg", gridArea: "13 / 2 / auto / span 2", mobileHidden: true, width: "60%", padding: "11rem 0 0 0" },
       ],
     },
   },
