@@ -19,10 +19,10 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto w-[95%] px-9 md:px-16
-     pt-[120px] pb-6">
+     pt-[120px] pb-6 2xl:pt-45">
      
       <div className="mb-10 md:max-w-[50%]">
-        <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl font-iowan" style={{ wordBreak: 'break-word' }}>
+        <h1 className="text-2xl md:text-2xl lg:text-2_5xl xl:text-3xl 2xl:text-5xl font-iowan" style={{ wordBreak: 'break-word' }}>
           {/* <span className="hidden sm:inline">
             {project.title.split(' - ').map((part, index) => (
               <span key={index} className={index > 0 ? "italic" : ""}>
@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }: PageProps) {
               </span>
             ))}
           </span> */}
-          <span className="">
+          <span className="2xl:leading-tight">
             {project.title.split(' - ').map((part, index) => (
               <span 
                 key={index} 
@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
 
       {project.description && project.description.length > 0 && (
-        <div className="text-sm/4.5 md:text-base/5.5 max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
+        <div className="text-sm/4.5 2xl:text-xl md:text-base/5.5 max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
           {project.description.map((paragraph, idx) => (
             <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} className="mb-6" />
           ))}
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       )}
 
-<div className="mt-2 mb-10 text-sm space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
+<div className="mt-2 mb-10 text-sm 2xl:text-xl space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
            {project.role && <div>Role ············· {project.role}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}
