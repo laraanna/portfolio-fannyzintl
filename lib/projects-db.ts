@@ -115,7 +115,7 @@ export function resolveCover(slug: string, explicit?: string, gallery?: string[]
 export const projects: Project[] = [
   {
     slug: "q36.5-brand",
-    title: "Q36.5 — Brand Systems",
+    title: "Q36.5 - Brand Systems",
     brand: "Q36.5",
     status: "recent-work",
     category: "brand-system",
