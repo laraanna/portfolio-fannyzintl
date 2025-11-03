@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
 
       {project.description && project.description.length > 0 && (
-        <div className="text-sm/4.5 2xl:text-xl md:text-base/5.5 max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
+        <div className="text-sm/4.5 2xl:text-lg md:text-base/5.5 max-w-none mb-10 md:max-w-[50%] lg:max-w-[40%]">
           {project.description.map((paragraph, idx) => (
             <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} className="mb-6" />
           ))}
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       )}
 
-<div className="mt-2 mb-10 text-sm 2xl:text-xl space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
+<div className="mt-2 mb-10 text-sm 2xl:text-lg space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
            {project.role && <div>Role ············· {project.role}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}
