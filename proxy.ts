@@ -2,7 +2,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 // Protect only your custom domain(s); allow *.vercel.app to stay open
-const PROTECTED_HOSTS = new Set(["yourdomain.com", "www.yourdomain.com"]);
+const PROTECTED_HOSTS = new Set(["fannyzintl.com", "www.fannyzintl.com"]);
 
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") || "";
