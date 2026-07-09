@@ -20,7 +20,7 @@ const quotes: Quote[] = [
     company: "OWNER - PINARELLO, Q36.5"
   },
   {
-    text: "\"Fanny has a rare ability to connect brand, marketing and performance in a way that translates directly into revenue.\"",
+    text: "\"Fanny is an exceptional strategic thinker. She has the ability to connect brand, marketing and performance, translating strategic thinking into real business results.\"",
     name: "JAN JELLE DE BOER",
     company: "SVP - S4 CAPITAL",
   }
@@ -70,7 +70,7 @@ export default function QuoteCarousel() {
                 className="w-full shrink-0 font-iowan italic text-sm"
               >
                 <div className="text-[rgba(209,209,209,1)] text-6xl font-iowan leading-none">&ldquo;</div>
-                <div className="not-italic font-iowan text-l max-w-[80%] pb-6 -mt-5">{quote.text}</div>
+                <div className="not-italic font-iowan text-l max-w-fluid-quote-mobile pb-6 -mt-5">{quote.text}</div>
                 <div className="not-italic font-inter text-xs font-medium">{quote.name}</div>
                 <div className="not-italic font-inter text-xs font-light">{quote.company}</div>
               </blockquote>
@@ -100,7 +100,7 @@ export default function QuoteCarousel() {
               className="font-iowan italic text-left text-sm lg:text-base 2xl:text-xl h-full flex flex-col items-start"
             >
               <div className="text-[rgba(209,209,209,1)] m-b-0.5 font-iowan text-5xl leading-[0.2]">&ldquo;</div>
-              <div className="not-italic font-iowan text-xs max-w-[70%] pb-3">{quote.text}</div>
+              <div className="not-italic font-iowan text-xs max-w-fluid-quote pb-3">{quote.text}</div>
               <div className="not-italic font-inter text-xxs font-medium">{quote.name}</div>
               <div className="not-italic font-inter text-xxs font-light">{quote.company}</div>
             </blockquote>
