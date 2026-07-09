@@ -2,7 +2,12 @@ import Link from "next/link";
 import { getAllProjects, Project } from "@/lib/projects-db";
 
 function ProjectLink({ project }: { project: Project }) {
-  const formattedCategory = project.category
+  const keepHyphenated: Record<string, string> = {
+    "scale-up-model": "Scale-Up Model",
+  };
+  const formattedCategory =
+  keepHyphenated[project.category] ??
+  project.category
     .split("-")
     .map((part) => (part.toLowerCase() === "gtm" ? "GTM" : part.charAt(0).toUpperCase() + part.slice(1)))
     .join(" ");
@@ -23,8 +28,8 @@ function ProjectLink({ project }: { project: Project }) {
 
 export default function Home() {
   const projects = getAllProjects();
-  const recentWork = projects.filter((p) => p.status === "recent-work");
-  const inProgress = projects.filter((p) => p.status === "in-progress");
+  const recentWork = projects.filter((p) => p.workStatus === "recent-work");
+  const inProgress = projects.filter((p) => p.workStatus === "in-progress");
 
   return (
     <main className="mx-auto w-[95%] px-3 py-6 pt-[100px] md:pt-0 pb-[80px] md:pb-0 min-h-screen flex items-center">

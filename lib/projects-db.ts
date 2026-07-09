@@ -18,6 +18,11 @@ export type Category =
   | "gtm-strategy"
   | "content-strategy"
   | "brand-campaign"
+  | "brand-building"
+  | "racing-platform"
+  | "growth-strategy"
+  | "scale-up-model"
+  | "brand-building"
   | "venture-strategy";
 
 
@@ -30,7 +35,7 @@ export type Project = {
   slug: string; // must match folder in /public/projects/<slug>
   title: string; 
   brand: string;
-  status: Status; 
+  workStatus: Status; 
   role: string;
   hiredBy?: string;
   client?: string;
@@ -41,6 +46,7 @@ export type Project = {
   category: Category;
   // Optional ordering if you want manual sort on listing pages
   sort?: number;
+  status?: string;
 
   // Images
   // If you set `gallery`, it will be used as-is.
@@ -117,7 +123,7 @@ export const projects: Project[] = [
     slug: "q36.5-brand",
     title: "Q36.5 - Brand Systems",
     brand: "Q36.5",
-    status: "recent-work",
+    workStatus: "recent-work",
     category: "brand-system",
     role: "Head of Brand & Strategy",
     collaborator: "Marc Vermeeren",
@@ -159,7 +165,7 @@ export const projects: Project[] = [
     slug: "bmw",
     title: "BMW - Marketing Engine",
     brand: "BMW",
-    status: "recent-work",
+    workStatus: "recent-work",
     category: "marketing-engine",
     role: "Strategy Director",
     hiredBy: ".Monks",
@@ -201,10 +207,10 @@ export const projects: Project[] = [
   },
   {
     slug: "q36.5-growth",
-    title: "Q36.5 - Growth Framework",
+    title: "Q36.5 - Scale-Up Model",
     brand: "Q36.5",
-    status: "recent-work",
-    category: "growth-framework",
+    workStatus: "recent-work",
+    category: "scale-up-model",
     role: "Head of Brand & Strategy",
     collaborator: "Don van Diest",
     client: "Q36.5",
@@ -256,8 +262,8 @@ export const projects: Project[] = [
     slug: "district-vision",
     title: "District Vision - Brand Narrative & Positioning",
     brand: "District Vision",
-    status: "recent-work",
-    category: "positioning",
+    workStatus: "recent-work",
+    category: "brand-building",
     role: "Brand Strategy",
     hiredBy: "Max Vallot",
     client: "District Vision",
@@ -284,11 +290,26 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "shades-growth-strategy",
+    title: "SHADES by Eric Kuster - Growth Strategy",
+    brand: "Shades",
+    workStatus: "recent-work",
+    category: "growth-strategy",
+    role: "Strategy Director",
+    hiredBy: "Thomas Malolepszy",
+    client: "SHADES by Eric Kuster",
+    description: [
+      "For SHADES by Eric Kuster, I supported the founder in turning a premium paint brand into a sharper, more scalable commercial proposition. I worked across brand strategy, messaging, audience definition, content planning and UX, translating Eric Kuster's design authority into a clear system customers could understand and act on.",
+      "My role was to structure the brand around a stronger strategic idea, define how it should show up across channels, and improve the customer journey from inspiration to purchase. This included the brand and comms playbook, channel roles, campaign moments, website structure, product page strategy and guidance around conversion, sampling and repeat purchase."
+    ],
+  },
+  
+  {
     slug: "q36.5-pro-team",
     title: "Q36.5 Pro Cycling Team - Brand Strategy & Activation",
     brand: "Q36.5 Pro Team",
-    status: "recent-work",
-    category: "brand-strategy",
+    workStatus: "recent-work",
+    category: "racing-platform",
     role: "Head of Brand & Strategy",
     season: "2023 & 2024",
     client: "Q36.5 Pro Cycling Team",
@@ -322,10 +343,25 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "atelier-kleinod",
+    title: "Atelier Kleinod - Brand Building",
+    brand: "Atelier Kleinod",
+    workStatus: "recent-work",
+    category: "brand-building",
+    role: "Strategy Director",
+    status: "Ongoing",
+    client: "Atelier KLEINOD",
+    description: [
+      "Atelier Kleinod is a handmade jewelry brand by Lara Wagner, rooted between Paris and Vienna.",
+      "I shaped the brand from its core idea outward and built the commercial framework to bring it to market. The work turned “Kleinod” into a clear creative world around small treasures and lasting meaning, supported by a focused test and learn system for growth.",
+    ],
+
+  },
+  {
     slug: "beyond-meat",
     title: "Beyond Meat - GTM Strategy",
     brand: "Beyond Meat",
-    status: "recent-work",
+    workStatus: "recent-work",
     category: "gtm-strategy",
     role: "Strategy Lead",
     hiredBy: ".Monks",
@@ -353,7 +389,7 @@ export const projects: Project[] = [
     slug: "netflix",
     title: "Netflix The Witcher - Content Strategy",
     brand: "Netflix",
-    status: "recent-work",
+    workStatus: "recent-work",
     category: "content-strategy",
     role: "Strategy Lead",
     hiredBy: ".Monks",
@@ -386,73 +422,73 @@ export const projects: Project[] = [
       ],
     },
   },
-  {
-    slug: "booking.com",
-    title: "Booking.com - Brand Campaign",
-    brand: "Booking.com",
-    status: "recent-work",
-    category: "brand-campaign",
-    role: "Strategy Lead",
-    hiredBy: ".Monks",
-    client: "Booking.com",
-    description: [
-      "Booking.com asked us to create their first global employer brand campaign, built around the idea of <i>'Expand Horizons'</i>.",
-      "As strategic lead, I shaped the campaign framework, building a modular system that could flex across audiences while staying anchored in one story. Working with employees across three continents, we surfaced insider humor and cultural nuances that revealed Booking's trademark diversity and sense of community: from a programmer’s debugging rubber duck to customer service anecdotes, every detail made the brand feel human, relatable, and globally connected.",
-      "The result was a campaign that turned employee experience into the strongest proof point of the employer brand, inspiring recruits by showing that working at Booking.com is itself a horizon-expanding experience."
-    ],
-    cover: "/projects/booking.com/booking.com-3.jpg",
-    gallery: [
-      "https://vimeo.com/656141775",
-      "https://vimeo.com/656143017",
-      "/projects/booking.com/booking.com-3.jpg",
-    ],
-    layout: {
-      columns: ["2fr", "1fr", "2fr"],
-      rows: ["auto", "auto", "auto"],
-      gap: 0,
-      images: [
-        { src: "https://vimeo.com/656141775", gridArea: "1 / 1 / auto / span 2", wFull: true,padding: "12.5rem 0 3.75rem 0" },
-        { src: "https://vimeo.com/656143017", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "1.875rem 0 1.875rem 0" },
-        { src: "/projects/booking.com/booking.com-3.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, padding: "3.75rem 0 0 0" },
-      ],
-    },
-  },
-  {
-    slug: "n26",
-    title: "N26 - Content Strategy",
-    brand: "N26",
-    status: "recent-work",
-    category: "content-strategy",
-    role: "Strategy Lead",
-    hiredBy: ".Monks",
-    client: "N26",
-    description: [
-      "In a crowded fintech market, N26 needed to stand out by making finance feel approachable and relevant. Many of their audiences struggled with jargon and saw money as a barrier rather than a tool.",
-      "I built a YouTube-first content strategy that reframed finances as a tool to achieve goals, then used audience insights, trending searches and behavioral data to shape talking tracks that cut through jargon and addressed real frustrations.",
-      "Through a smart production model with weekly shoots in a branded studio, N26 reached an average of 280k views per video and positioned itself as a leading voice in the finance conversation on YouTube."
-    ],
-    cover: "/projects/beyond-meat/beyond-meat-2.jpg",
-    gallery: [
-      "https://www.youtube.com/watch?v=TSJyetG4SBU",
-      "https://www.youtube.com/watch?v=AXYlnyCUETU",
-      "https://www.youtube.com/watch?v=b_7M1byjEbE",
-    ],
-    layout: {
-      columns: ["2fr", "1fr", "2fr"],
-      rows: ["auto", "auto", "auto"],
-      gap: 0,
-      images: [
-        { src: "https://www.youtube.com/watch?v=TSJyetG4SBU", gridArea: "1 / 1 / auto / span 2", wFull: true },
-        { src: "https://www.youtube.com/watch?v=AXYlnyCUETU", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "9.375rem 0 9.375rem 0" },
-        { src: "https://www.youtube.com/watch?v=b_7M1byjEbE", gridArea: "3 / 1 / auto / span 2", wFull: true },
-      ],
-    },
-  },
+  // {
+  //   slug: "booking.com",
+  //   title: "Booking.com - Brand Campaign",
+  //   brand: "Booking.com",
+  //   workStatus: "recent-work",
+  //   category: "brand-campaign",
+  //   role: "Strategy Lead",
+  //   hiredBy: ".Monks",
+  //   client: "Booking.com",
+  //   description: [
+  //     "Booking.com asked us to create their first global employer brand campaign, built around the idea of <i>'Expand Horizons'</i>.",
+  //     "As strategic lead, I shaped the campaign framework, building a modular system that could flex across audiences while staying anchored in one story. Working with employees across three continents, we surfaced insider humor and cultural nuances that revealed Booking's trademark diversity and sense of community: from a programmer’s debugging rubber duck to customer service anecdotes, every detail made the brand feel human, relatable, and globally connected.",
+  //     "The result was a campaign that turned employee experience into the strongest proof point of the employer brand, inspiring recruits by showing that working at Booking.com is itself a horizon-expanding experience."
+  //   ],
+  //   cover: "/projects/booking.com/booking.com-3.jpg",
+  //   gallery: [
+  //     "https://vimeo.com/656141775",
+  //     "https://vimeo.com/656143017",
+  //     "/projects/booking.com/booking.com-3.jpg",
+  //   ],
+  //   layout: {
+  //     columns: ["2fr", "1fr", "2fr"],
+  //     rows: ["auto", "auto", "auto"],
+  //     gap: 0,
+  //     images: [
+  //       { src: "https://vimeo.com/656141775", gridArea: "1 / 1 / auto / span 2", wFull: true,padding: "12.5rem 0 3.75rem 0" },
+  //       { src: "https://vimeo.com/656143017", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "1.875rem 0 1.875rem 0" },
+  //       { src: "/projects/booking.com/booking.com-3.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, padding: "3.75rem 0 0 0" },
+  //     ],
+  //   },
+  // },
+  // {
+  //   slug: "n26",
+  //   title: "N26 - Content Strategy",
+  //   brand: "N26",
+  //   workStatus: "recent-work",
+  //   category: "content-strategy",
+  //   role: "Strategy Lead",
+  //   hiredBy: ".Monks",
+  //   client: "N26",
+  //   description: [
+  //     "In a crowded fintech market, N26 needed to stand out by making finance feel approachable and relevant. Many of their audiences struggled with jargon and saw money as a barrier rather than a tool.",
+  //     "I built a YouTube-first content strategy that reframed finances as a tool to achieve goals, then used audience insights, trending searches and behavioral data to shape talking tracks that cut through jargon and addressed real frustrations.",
+  //     "Through a smart production model with weekly shoots in a branded studio, N26 reached an average of 280k views per video and positioned itself as a leading voice in the finance conversation on YouTube."
+  //   ],
+  //   cover: "/projects/beyond-meat/beyond-meat-2.jpg",
+  //   gallery: [
+  //     "https://www.youtube.com/watch?v=TSJyetG4SBU",
+  //     "https://www.youtube.com/watch?v=AXYlnyCUETU",
+  //     "https://www.youtube.com/watch?v=b_7M1byjEbE",
+  //   ],
+  //   layout: {
+  //     columns: ["2fr", "1fr", "2fr"],
+  //     rows: ["auto", "auto", "auto"],
+  //     gap: 0,
+  //     images: [
+  //       { src: "https://www.youtube.com/watch?v=TSJyetG4SBU", gridArea: "1 / 1 / auto / span 2", wFull: true },
+  //       { src: "https://www.youtube.com/watch?v=AXYlnyCUETU", gridArea: "2 / 2 / auto / span 2", wFull: true, padding: "9.375rem 0 9.375rem 0" },
+  //       { src: "https://www.youtube.com/watch?v=b_7M1byjEbE", gridArea: "3 / 1 / auto / span 2", wFull: true },
+  //     ],
+  //   },
+  // },
   {
     slug: "naviya",
     title: "Naviya - Venture Strategy",
     brand: "Naviya",
-    status: "in-progress",
+    workStatus: "in-progress",
     category: "venture-strategy",
     role: "Founding Team",
     togetherWith: "Marc Vermeeren",

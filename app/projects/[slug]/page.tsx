@@ -70,6 +70,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
 <div className="mt-2 mb-10 text-sm 2xl:text-lg space-y-1 font-inter-light md:ml-auto md:max-w-[20%] lg:max-w-[20%]">
            {project.role && <div>Role ············· {project.role}</div>}
+           {project.status && <div>Status ············· {project.status}</div>}
            {project.hiredBy && <div>Hired by ············· {project.hiredBy}</div>}
            {project.client && <div>Client ············· {project.client}</div>}
            {project.collaborator && <div>Collaborator ············· {project.collaborator}</div>}
