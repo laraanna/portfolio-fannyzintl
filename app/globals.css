@@ -10,7 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   /* approx 1920px  */
-  --breakpoint-2xl: 120rem; 
+  --breakpoint-2xl: 120rem;
+  --text-xxs: 0.625rem; /* 10px — smaller than text-xs (12px) */
+  --text-xxs--line-height: 0.75rem; /* 12px */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -114,6 +116,34 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: -0.05em;
+}
+
+@utility text-fluid-hero {
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 7rem);
+  line-height: 1.05;
+}
+
+@utility text-fluid-brand {
+  font-size: clamp(1.25rem, 0.85rem + 1.4vw, 3.375rem);
+  line-height: 1.15;
+}
+
+@utility text-fluid-label {
+  font-size: clamp(0.75rem, 0.65rem + 0.35vw, 1.25rem);
+  line-height: 1.4;
+}
+
+@utility text-fluid-category {
+  font-size: clamp(0.75rem, 0.7rem + 0.2vw, 1.125rem);
+  line-height: 1.4;
+}
+
+@utility gap-fluid-home {
+  gap: clamp(1.5rem, 1rem + 2vh, 3rem);
+}
+
+@utility mt-fluid-home {
+  margin-top: clamp(1.5rem, 1rem + 2vh, 3rem);
 }
 
 @utility text-1_5xl {

@@ -301,11 +301,27 @@ export const projects: Project[] = [
       "For SHADES by Eric Kuster, I supported the founder in turning a premium paint brand into a sharper, more scalable commercial proposition. I worked across brand strategy, messaging, audience definition, content planning and UX, translating Eric Kuster's design authority into a clear system customers could understand and act on.",
       "My role was to structure the brand around a stronger strategic idea, define how it should show up across channels, and improve the customer journey from inspiration to purchase. This included the brand and comms playbook, channel roles, campaign moments, website structure, product page strategy and guidance around conversion, sampling and repeat purchase."
     ],
+    layout: {
+      columns: ["1fr", "1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/district-vision/district-vision-8.jpg", gridArea: "6 / 2 / auto / span 2" },
+        // { src: "/projects/shades/shades-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-2.jpg", gridArea: "2 / 2 / span 2 / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-3.jpg", gridArea: "4 / 1 / span 2 / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-4.jpg", gridArea: "4 / 3 / auto / auto", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-5.jpg", gridArea: "5 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-6.jpg", gridArea: "6 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-7.jpg", gridArea: "7 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+        // { src: "/projects/shades/shades-8.jpg", gridArea: "7 / 3 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+      ],
+    },
   },
   
   {
     slug: "q36.5-pro-team",
-    title: "Q36.5 Pro Cycling Team - Racing Platform",
+    title: "Q36.5 Pro Team - Racing Platform",
     brand: "Q36.5 Pro Team",
     workStatus: "recent-work",
     category: "racing-platform",
@@ -355,6 +371,22 @@ export const projects: Project[] = [
       "Atelier Kleinod is a handmade jewelry brand by Lara Wagner, rooted between Paris and Vienna.",
       "I shaped the brand from its core idea outward and built the commercial framework to bring it to market. The work turned “Kleinod” into a clear creative world around small treasures and lasting meaning, supported by a focused test and learn system for growth.",
     ],
+    layout: {
+      columns: ["1fr", "1fr","1fr", "1fr"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      gap: 0,
+      images: [
+        { src: "/projects/atelier-kleinod/atelier-kleinod-1.jpg", gridArea: "1 / 1 / span 2 / span 2", wFull: true, padding: "0 0 5rem 0" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-2.jpg", gridArea: "2 / 3 / auto / span 2", wFull: true, padding: "10rem 8rem 0 8rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-3.jpg", gridArea: "3 / 3 / auto / span 2", wFull: true, padding: "10rem 3rem 0 3rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-4.jpg", gridArea: "3 / 1 / auto / span 2", wFull: true, padding: "5rem 6rem 10rem 6rem"},
+        { src: "/projects/atelier-kleinod/atelier-kleinod-5.jpg", gridArea: "4 / 1 / auto / span 3", wFull: true, padding: "10rem 0 0 0rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-6.jpg", gridArea: "5 / 3 / auto / span 2", wFull: true, padding: "5rem 10rem 0 10rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-7.jpg", gridArea: "5 / 1 / span 2 / span 2", wFull: true, padding: "20rem 0 0 0rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-8.jpg", gridArea: "7 / 1 / auto / span 2", wFull: true, padding: "20rem 5rem 0 15rem" },
+        { src: "/projects/atelier-kleinod/atelier-kleinod-9.jpg", gridArea: "6 / 3 / span 2 / span 2", wFull: true, padding: "35rem 0 0 5rem"},
+      ],
+    },
 
   },
   {
