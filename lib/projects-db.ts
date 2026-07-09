@@ -121,17 +121,16 @@ export function resolveCover(slug: string, explicit?: string, gallery?: string[]
 export const projects: Project[] = [
   {
     slug: "q36.5-brand",
-    title: "Q36.5 - Brand Systems",
+    title: "Q36.5 - Brand System",
     brand: "Q36.5",
     workStatus: "recent-work",
     category: "brand-system",
-    role: "Head of Brand & Strategy",
+    role: "Chief Strategy Office",
     collaborator: "Marc Vermeeren",
     client: "Q36.5",
     description: [
-      "As Head of Strategy I led Q36.5's strategic transformation by spearheading a full rebrand under the ethos of Innovation for Human Performance. We redefined the brand from the inside out: product design, e-commerce, packaging, typography and visual identity were all rebuilt around the idea of Q36.5 as a research laboratory, not just a cycling apparel company.",
-      "The narrative was rooted in the brand's DNA: Quaerere (research) and 36.5 (the optimal human body temperature). From this foundation we created a brand story where every product amplifies human potential: seeing gear as performance technology, not just clothing.",
-      "The result was an aligned brand, product and marketing strategy that fueled global visibility and delivered 200% year-on-year growth."
+      "As Chief Strategy Officer I led Q36.5's strategic transformation by spearheading a full rebrand under the ethos of Innovation for Human Performance. We redefined the brand from the inside out: product design, e-commerce, packaging, typography and visual identity were all rebuilt around the idea of Q36.5 as a research laboratory, not just a cycling apparel company.",
+      "The narrative was rooted in the brand's DNA: Quaerere (research) and 36.5 (the optimal human body temperature). From this foundation we created a brand story where every product amplifies human potential: seeing gear as performance technology, not just clothing. The result was an aligned brand, product and marketing strategy that fueled global visibility and delivered 200% YOY growth."
     ],
     layout: {
       columns: ["1fr", "1fr", "1fr"],
@@ -171,8 +170,8 @@ export const projects: Project[] = [
     hiredBy: ".Monks",
     client: "BMW",
     description: [
-      "In 2020 BMW Group awarded .Monks the lead for its pan-European marketing across BMW and MINI.",
-      "I was part of the strategy taskforce that designed the operating model behind the account: a high-performance marketing engine combining creativity, data, media and consulting. It powered campaigns like BMW i4 Edge Electrified, MINIWOOD virtual production, and the award-winning Lil Miquela Make it Real campaign, showing that scale and creativity can live side by side."
+      "For BMW Group, I was part of the strategy taskforce shaping the operating model for their Group’s pan European BMW and MINI account.",
+      "The task was to design how a major account could run with more speed, clarity and creative output across markets. The model we built was a high-performance marketing engine and smartly combined creativity, data and media. It powered campaigns like BMW i4 Edge Electrified, MINIWOOD virtual production, and the award-winning Lil Miquela Make it Real campaign, showing that scale and creativity can live side by side."
     ],
     cover: "/projects/bmw/bmw-2.jpg",
     gallery: [
@@ -211,7 +210,7 @@ export const projects: Project[] = [
     brand: "Q36.5",
     workStatus: "recent-work",
     category: "scale-up-model",
-    role: "Head of Brand & Strategy",
+    role: "Chief Strategy Officer",
     collaborator: "Don van Diest",
     client: "Q36.5",
     description: [
@@ -260,17 +259,17 @@ export const projects: Project[] = [
 },
   {
     slug: "district-vision",
-    title: "District Vision - Brand Narrative & Positioning",
+    title: "District Vision - Brand Building",
     brand: "District Vision",
     workStatus: "recent-work",
     category: "brand-building",
-    role: "Brand Strategy",
+    role: "Strategy Director",
     hiredBy: "Max Vallot",
     client: "District Vision",
     description: [
-      "During my time at District Vision I helped develop <i>Meditation in Motion</i>, a long-term strategic brand foundation that reframed athleticism through a holistic lens, putting mindfulness at the foundation of physical performance.",
-      "<i>Meditation in Motion</i> argues that true high performance isn't just a physical ideal, it begins in the mind. That mental clarity and balance are the foundation on which every stride, every pace, every pedal stroke is built.",
-      "By embedding <i>Meditation in Motion</i> deeply into brand strategy, we ensured it wasn't a tagline or campaign. It became the lens through which all creative decisions passed.",
+      "Together with the founders of District Vision, I developed Meditation in Motion, a long-term strategic brand foundation that reframed athleticism through a holistic lens, putting mindfulness at the foundation of physical performance.",
+      "Meditation in Motion argues that true high performance isn't just a physical ideal, it begins in the mind. That mental clarity and balance are the foundation on which every stride, every pace, every pedal stroke is built.",
+      "By embedding Meditation in Motion deeply into brand strategy, we ensured it wasn't a tagline or campaign. It became the lens through which all creative decisions passed.",
       "It remains the brand's guiding ethos today, shaping every campaign and product story. The recent creative work here is a direct continuation of that foundation, proof of a strategy built to endure and evolve."
     ],
     layout: {
@@ -306,7 +305,7 @@ export const projects: Project[] = [
   
   {
     slug: "q36.5-pro-team",
-    title: "Q36.5 Pro Cycling Team - Brand Strategy & Activation",
+    title: "Q36.5 Pro Cycling Team - Racing Platform",
     brand: "Q36.5 Pro Team",
     workStatus: "recent-work",
     category: "racing-platform",
@@ -314,8 +313,9 @@ export const projects: Project[] = [
     season: "2023 & 2024",
     client: "Q36.5 Pro Cycling Team",
     description: [
-      "In 2023, I led the full brand and strategy for Q36.5's entry into pro cycling under the umbrella of <i>#RacingTheFuture</i>. Over two seasons I shaped every aspect: from kit design to identity to year-round communication, hero campaigns, and integrating the team as a living embodiment of the brand vision. ",
-      "Under my direction, brand and performance merged. We aligned Q36.5's technical DNA with a compelling narrative that the team isn't just sponsored, it is the brand in action."
+      "Over two seasons, I led Q36.5’s brand strategy for its entry into pro cycling under the umbrella concept of #RacingTheFuture.",
+      "My work shaped every aspect of the brand in action: from how the team looked, spoke and showed up across two seasons, from kit direction and identity to hero campaigns, race storytelling and year round communication.",
+      "Under my direction, brand and performance merged. We aligned Q36.5's technical DNA with a compelling narrative that the team isn't just sponsored, it is the brand in action.",
     ],
     layout: {
       columns: ["1fr", "1fr"],
@@ -367,8 +367,8 @@ export const projects: Project[] = [
     hiredBy: ".Monks",
     client: "Beyond Meat",
     description: [
-      "As digital agency of record for Beyond Meat in the US and Europe, we expanded on the brand's core idea of Going Beyond. While the business had initially focused on B2B growth, in mid 2020 we defined a distinct B2C approach that could scale globally while resonating locally.",
-      "I led the social first content strategy that built a coherent and impactful global presence, tailored to cultural nuances in key markets. This work brought plant based food from shelves to dinner plates in Germany, the UK and the Netherlands, establishing Beyond Meat not just as a product but as a thought leader in the plant-based movement."
+      "Beyond Meat had built momentum through B2B growth, but the next challenge was consumer adoption: making plant based food feel relevant, desirable and easy to choose in everyday culture.",
+      "I led the social first content strategy for the US and Europe, building a coherent global presence that could flex across local markets. The work translated Going Beyond into content people could actually use, from dinner inspiration to cultural conversation and helped position Beyond Meat as a leading voice in the plant based movement.",
     ],
     layout: {
       columns: ["1fr", "1fr"],
