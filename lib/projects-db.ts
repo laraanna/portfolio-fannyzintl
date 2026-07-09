@@ -303,18 +303,18 @@ export const projects: Project[] = [
     ],
     layout: {
       columns: ["1fr", "1fr", "1fr"],
-      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      rows: ["auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto", "auto"],
       gap: 0,
       images: [
-        { src: "/projects/district-vision/district-vision-8.jpg", gridArea: "6 / 2 / auto / span 2" },
-        // { src: "/projects/shades/shades-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-2.jpg", gridArea: "2 / 2 / span 2 / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-3.jpg", gridArea: "4 / 1 / span 2 / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-4.jpg", gridArea: "4 / 3 / auto / auto", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-5.jpg", gridArea: "5 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-6.jpg", gridArea: "6 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-7.jpg", gridArea: "7 / 1 / auto / span 2", wFull: true, padding: "0 0 0 0" },
-        // { src: "/projects/shades/shades-8.jpg", gridArea: "7 / 3 / auto / span 2", wFull: true, padding: "0 0 0 0" },
+        { src: "/projects/shades/shades-1.jpg", gridArea: "1 / 1 / auto / span 2", wFull: true, hFull: false, padding: "7rem 7rem 0 0" },
+        { src: "/projects/shades/shades-2.jpg", gridArea: "2 / 2 / span 2 / span 2", wFull: true, hFull: false, padding: "7rem 8rem 0 0" },
+        { src: "/projects/shades/shades-5.jpg", gridArea: "4 / 1 / auto / span 2", wFull: true, hFull: false, padding: "15rem 8rem 0 0" },
+        { src: "/projects/shades/shades-6.jpg", gridArea: "5 / 1 / auto / span 2", wFull: true, hFull: false, padding: "0 8rem 0 0" },
+        { src: "/projects/shades/shades-7.jpg", gridArea: "6 / 1 / auto / span 2", wFull: true, hFull: false, padding: "0 8rem 0 0" },
+        { src: "/projects/shades/shades-9.jpg", gridArea: "4 / 3 / auto / auto", wFull: true, hFull: false, padding: "5rem 5rem 0 0" },
+        { src: "/projects/shades/shades-4.jpg", gridArea: "6 / 3 / auto / auto", wFull: true, hFull: false, padding: "10rem 0 0 0" },
+        { src: "/projects/shades/shades-3.jpg", gridArea: "7 / 2 / auto / auto", wFull: true, hFull: false, padding: "0 8rem 0 0" },
+        { src: "/projects/shades/shades-8.jpg", gridArea: "8 / 1 / auto / span 2", wFull: true, hFull: false, padding: "7rem 0rem 0 20rem" },
       ],
     },
   },
@@ -548,10 +548,17 @@ export const projects: Project[] = [
 // ────────────────────────────────────────────────────────────────────────────────
 // Access helpers
 // ────────────────────────────────────────────────────────────────────────────────
+function resolveGallery(project: Project): string[] {
+  if (project.gallery?.length) return project.gallery;
+  const scanned = scanProjectImages(project.slug);
+  if (scanned.length) return scanned;
+  return project.layout?.images.map((image) => image.src) ?? [];
+}
+
 export function getAllProjects() {
   return projects
     .map((p) => {
-      const gallery = p.gallery ?? scanProjectImages(p.slug);
+      const gallery = resolveGallery(p);
       const cover = resolveCover(p.slug, p.cover, gallery);
       return { ...p, cover, gallery };
     })
@@ -561,7 +568,7 @@ export function getAllProjects() {
 export function getProjectBySlug(slug: string) {
   const p = projects.find((x) => x.slug === slug);
   if (!p) return null;
-  const gallery = p.gallery ?? scanProjectImages(p.slug);
+  const gallery = resolveGallery(p);
   const cover = resolveCover(p.slug, p.cover, gallery);
   return { ...p, cover, gallery };
 }

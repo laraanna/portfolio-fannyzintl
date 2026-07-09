@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: PageProps) {
            {project.stage && <div>Stage ············· {project.stage}</div>}
          </div>
 
-      {project.gallery && project.gallery.length > 0 && (
+      {((project.layout?.images?.length ?? 0) > 0 || (project.gallery?.length ?? 0) > 0) && (
         <div className="grid grid-cols-1 gap-6">
           {project.layout ? (
             <div 
