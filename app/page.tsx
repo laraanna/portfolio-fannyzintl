@@ -59,7 +59,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className="flex justify-center w-full mt-12">
+      <div className="flex justify-center w-[80%] mt-12">
         <div className="w-[80vw] pt-8 border-t-[0.4px] border-t-[rgba(113, 113, 113, 0.2)]">
           <QuoteCarousel />
         </div>
