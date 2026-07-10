@@ -243,6 +243,7 @@ Mid desktop:   use wide: at 1440px where you need a step before 2xl
 - Auto-scan only works when folder name matches slug (e.g. `public/projects/my-slug/`)
 - Gallery renders if `layout.images` **or** `gallery` has items (`app/projects/[slug]/page.tsx`)
 - For grid layouts, set `hFull: false` on images unless you need them to fill a fixed-height cell
+- **Replacing images:** if you overwrite a file with the same name (e.g. `shades-2.jpg`), browsers and Next.js may cache the old version. In dev, restart the server after replacing files. Hard-refresh the browser (`Cmd+Shift+R`). If it still sticks, run `rm -rf .next` and restart. Use the correct file extension in `src` (e.g. `.png` vs `.jpg`).
 
 ---
 
