@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
       <section id="section-contact" className="md:max-w-[70%] lg:max-w-[40%] md:ml-[15%] lg:ml-[30%]">
         <SectionHeading>Contact</SectionHeading>
-        <p className="text-sm/4.5 xl:text-lg 2xl:text-1_5xl mb-4">I work with brands and teams on projects of all sizes, but preferably in a scale-up phase. If you&apos;re looking for a strategic partner or are building something, send me a message.</p>
+        <p className="text-sm/4.5 xl:text-lg 2xl:text-1_5xl mb-4">I work with brands and teams on projects of all sizes, but preferably in a scale-up phase. If you're looking for a strategic partner or are building something, send me a message.</p>
         <p className="text-sm/4.5 xl:text-lg 2xl:text-1_5xl">hello@fannyzintl.com / <a href="https://www.linkedin.com/in/fanny-zintl-ab183ba7/" target="_blank" className="border-b border-black" rel="noopener noreferrer">LinkedIn</a></p>
       </section>
     </main>
