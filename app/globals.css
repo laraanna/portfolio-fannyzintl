@@ -11,8 +11,10 @@
   --font-sans: var(--font-inter);
   /* 1440px — between xl (1280) and 2xl (1920) */
   --breakpoint-wide: 90rem;
-  /* approx 1920px  */
+  /* approx 1920px */
   --breakpoint-2xl: 120rem;
+  /* QHD high-end desktop — 2560px */
+  --breakpoint-3xl: 160rem;
   --text-3xs: 0.5rem; /* 8px — smaller than text-xxs (10px) */
   --text-3xs--line-height: 0.625rem; /* 10px */
   --text-xxs: 0.625rem; /* 10px — smaller than text-xs (12px) */

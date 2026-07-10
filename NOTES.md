@@ -17,18 +17,19 @@ Defined in `app/globals.css` → `@theme inline`.
 | `xl:`    | 1280px  | Default Tailwind — used on about + home hero |
 | `wide:`  | 1440px  | **Custom** — laptop / medium desktop (`90rem`) |
 | `2xl:`   | 1920px  | **Custom** — large artboard target (`120rem`) |
+| `3xl:`   | 2560px  | **Custom** — QHD / high-end desktop (`160rem`) |
 
 ### Typical usage pattern
 
 ```
-base  →  md  →  wide  →  2xl
-mobile    layout   1440px   1920px
+base  →  md  →  wide  →  2xl  →  3xl
+mobile    layout   1440px   1920px   2560px (QHD)
 ```
 
 Example:
 
 ```tsx
-className="text-5xl wide:text-6xl 2xl:text-7xl"
+className="text-5xl wide:text-6xl 2xl:text-7xl 3xl:text-8xl"
 ```
 
 ### Where breakpoints are configured
@@ -38,6 +39,7 @@ className="text-5xl wide:text-6xl 2xl:text-7xl"
 @theme inline {
   --breakpoint-wide: 90rem;   /* 1440px */
   --breakpoint-2xl: 120rem;   /* 1920px */
+  --breakpoint-3xl: 160rem;   /* 2560px — QHD */
 }
 ```
 
@@ -201,6 +203,7 @@ Labels:        text-sm  →  2xl:text-xl
 Display/hero:  text-4_5xl  →  lg:text-6xl  →  xl:text-7_5xl  →  2xl:text-8xl
                (or use text-fluid-hero for smooth scaling)
 Large screens: always add a 2xl: step for 1920px artboard
+QHD screens:  add 3xl: step for 2560px displays
 Mid desktop:   use wide: at 1440px where you need a step before 2xl
 ```
 
