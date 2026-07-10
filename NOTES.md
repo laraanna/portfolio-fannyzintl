@@ -107,6 +107,7 @@ All sizes assume `1rem = 16px`.
 
 | Class | Font size | Line height | Defined in |
 |-------|-----------|-------------|------------|
+| `text-3xs` | 8px (0.5rem) | 10px (0.625rem) | `@theme inline` |
 | `text-xxs` | 10px (0.625rem) | 12px (0.75rem) | `@theme inline` |
 | `text-1_5xl` | 22px (1.375rem) | 32px (2rem) | `@utility` |
 | `text-2_5xl` | 28px (1.75rem) | 36px (2.25rem) | `@utility` |

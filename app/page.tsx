@@ -19,9 +19,9 @@ function ProjectLink({ project }: { project: Project }) {
       href={`/projects/${project.slug.replace(/^project-/, "")}`}
       className="group block"
     >
-      <div className="mt-2 text-sm">
-        <span className="text-2xl lg:text-2_5xl 2xl:text-5_5xl font-iowan">{project.brand}</span>
-        <span className="text-sm 2xl:text-lg font-inter"> {formattedCategory}</span>
+      <div className="mt-2 lg:mt-1 xl:mt-2 text-sm">
+        <span className="text-2xl lg:text-base xl:text-xl 2xl:text-5_5xl font-iowan">{project.brand}</span>
+        <span className="text-sm lg:text-xxs xl:text-xxs 2xl:text-lg font-inter"> {formattedCategory}</span>
       </div>
     </Link>
   );
@@ -36,12 +36,12 @@ export default function Home() {
     <main className="mx-auto w-[95%] px-3 py-6 pt-[100px] md:pt-0 pb-[80px] md:pb-0 min-h-screen flex flex-col items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
         <div className="flex items-center justify-center">
-          <h1 className="text-4_5xl lg:text-6xl xl:text-7_5xl 2xl:text-8xl my-14 md:my-0 font-iowan">I build and <br /> grow brands.</h1>
+          <h1 className="text-4_5xl lg:text-5xl xl:text-7xl 2xl:text-8xl my-14 md:my-0 font-iowan">I build and <br /> grow brands.</h1>
         </div>
         <div className="px-6 md:px-0 md:pl-12">
            <h2 className="text-sm  2xl:text-xl mb-1 font-iowan italic">Recent work:</h2>
 
-          <div className="grid grid-cols-1 gap-0 mb-12">
+          <div className="grid grid-cols-1 gap-0 mb-12 lg:mb-4 xl:mb-12">
             {recentWork.map((p) => (
               <ProjectLink key={p.slug} project={p} />
             ))}
@@ -59,8 +59,8 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className="flex justify-center w-[80%] mt-12">
-        <div className="w-[80vw] pt-8 border-t-[0.4px] border-t-[rgba(113, 113, 113, 0.2)]">
+      <div className="flex justify-center w-[80%] mt-12 lg:mt-4 xl:mt-12">
+        <div className="w-[80vw] pt-8  border-t-[0.4px] border-t-[rgba(113, 113, 113, 0.2)]">
           <QuoteCarousel />
         </div>
       </div>

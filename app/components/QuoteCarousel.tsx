@@ -93,16 +93,16 @@ export default function QuoteCarousel() {
           </div>
         </div>
 
-        <div className="hidden md:flex flex-row gap-12 lg:gap-10 w-full ">
+        <div className="hidden md:flex flex-row gap-12 lg:gap-6 xl:gap-10 w-full ">
           {quotes.map((quote, index) => (
             <blockquote
               key={index}
               className="font-iowan italic text-left text-sm lg:text-base 2xl:text-xl h-full flex flex-col items-start"
             >
               <div className="text-[rgba(209,209,209,1)] m-b-0.5 font-iowan text-5xl 2xl:text-7xl leading-[0.2] 2xl:leading-[0.4]">&ldquo;</div>
-              <div className="not-italic font-iowan text-xs 2xl:text-xl max-w-fluid-quote 2xl:max-w-fluid-quote-mobile pb-3">{quote.text}</div>
-              <div className="not-italic font-inter text-xxs 2xl:text-lg font-medium">{quote.name}</div>
-              <div className="not-italic font-inter text-xxs 2xl:text-lg font-light">{quote.company}</div>
+              <div className="not-italic font-iowan text-xs lg:text-xxs wide:text-xs 2xl:text-xl max-w-[70%] lg:max-w-full xl:max-w-[70%] pb-3">{quote.text}</div>
+              <div className="not-italic font-inter text-xxs lg:text-3xs xl:text-xxs 2xl:text-lg font-medium">{quote.name}</div>
+              <div className="not-italic font-inter text-xxs lg:text-3xs xl:text-xxs 2xl:text-lg font-light">{quote.company}</div>
             </blockquote>
           ))}
         </div>
