@@ -308,8 +308,8 @@ export const projects: Project[] = [
       images: [
         { src: "/projects/shades/shades-1.jpg", gridArea: "1 / 2 / auto / span 2", wFull: true, hFull: false, padding: "5rem 0rem 0 0" },
         { src: "/projects/shades/shades-2.jpg", gridArea: "2 / 1 / auto / span 2", wFull: true, hFull: false, padding: "7rem 0rem 0 0" },
-        { src: "/projects/shades/shades-3.jpg", gridArea: "3 / 2 / span 2 / span 3", wFull: true, hFull: false, padding: "7rem 0rem 0 15rem" },
-        { src: "/projects/shades/shades-4.jpg", gridArea: "3 / 1 / span 2 / span 2", mobileHidden: true, wFull: true, hFull: false, padding: "25rem 15rem 0 0" },
+        { src: "/projects/shades/shades-3.jpg", gridArea: "3 / 3 / span 2 / span 2", wFull: true, hFull: false, padding: "7rem 0 0 2rem" },
+        { src: "/projects/shades/shades-4.jpg", gridArea: "3 / 1 / span 2 / span 2", mobileHidden: true, wFull: true, hFull: false, width: "55%", padding: "25rem 0 0 0" },
         { src: "/projects/shades/shades-5.jpg", gridArea: "5 / 1 / auto / span 2", wFull: true, hFull: false, padding: "7rem 0rem 0 0" },
         { src: "/projects/shades/shades-6.png", gridArea: "6 / 2 / auto / auto", wFull: true, hFull: false, padding: "10rem 0 0 0" },
         { src: "/projects/shades/shades-7.jpg", gridArea: "5 / 3 / span 2 / span 2", wFull: true, hFull: false, padding: "25rem 10rem 0 10rem" },
