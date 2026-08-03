@@ -3,11 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --nav-pill: #f3f3f3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nav-pill: var(--nav-pill);
   --font-sans: var(--font-inter);
   /* 1440px — between xl (1280) and 2xl (1920) */
   --breakpoint-wide: 90rem;
@@ -25,6 +27,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --nav-pill: #1f1f1f;
   }
 }
 
