@@ -1,10 +1,16 @@
 // proxy.ts
 import { NextResponse, type NextRequest } from "next/server";
 
+// Password protection is currently OFF.
+// To re-enable: set to `process.env.ENABLE_BASIC_AUTH === "true"` and restore BASIC_AUTH_USER / BASIC_AUTH_PASS.
+const AUTH_ENABLED = false;
+
 // Protect only your custom domain(s); allow *.vercel.app to stay open
 const PROTECTED_HOSTS = new Set(["fannyzintl.com", "www.fannyzintl.com"]);
 
 export function proxy(req: NextRequest) {
+  if (!AUTH_ENABLED) return NextResponse.next();
+
   const host = req.headers.get("host") || "";
   if (!PROTECTED_HOSTS.has(host)) return NextResponse.next();
 
